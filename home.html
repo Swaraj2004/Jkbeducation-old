@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <title>JKB ENGG</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="home.css" id="index-css" />
+  </head>
+  <body>
+    <div id="container">
+      <nav>
+        <div id="nav-left">
+          <img
+            id="menu-icon"
+            onclick="showMenu()"
+            src="images/menu.png"
+            alt="="
+          />
+          <img
+            id="jkb-logo"
+            src="images/jkb_logo.png"
+            alt="jkb-logo"
+            draggable="false"
+          />
+          <div id="social">
+            <div id="whatsapp">
+              <a
+                href="https://api.whatsapp.com/send/?phone=919768455222&text=Hi&type=phone_number&app_absent=0"
+                target="_blank"
+                draggable="false"
+                ><img
+                  class="social-icons"
+                  src="images/whatsapp.png"
+                  draggable="false"
+              /></a>
+            </div>
+            <div id="phone">
+              <a href="tel:+919768455222" target="_blank" draggable="false"
+                ><img
+                  class="social-icons"
+                  src="images/phone.png"
+                  draggable="false"
+              /></a>
+            </div>
+            <div id="youtube">
+              <a
+                href="https://www.youtube.com/channel/UC0lmhygv8wJTQbVjF-6QUVg"
+                target="_blank"
+                draggable="false"
+                ><img
+                  class="social-icons"
+                  src="images/youtube.png"
+                  draggable="false"
+              /></a>
+            </div>
+            <div id="insta">
+              <a
+                href="https://www.instagram.com/jkb_education_group/"
+                target="_blank"
+                draggable="false"
+                ><img
+                  class="social-icons"
+                  src="images/instagram.png"
+                  draggable="false"
+              /></a>
+            </div>
+            <div id="linkdn">
+              <a
+                href="https://in.linkedin.com/company/jkb-education-group?trk=public_profile_topcard-current-company"
+                target="_blank"
+                draggable="false"
+                ><img
+                  class="social-icons"
+                  src="images/linkedin.png"
+                  draggable="false"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div id="overlay"></div>
+        <ul id="menu" class="hidemenu">
+          <img id="cross-icon" src="images/cross.png" alt="=" />
+          <img
+            id="jkb-logo-menu"
+            src="images/jkb_logo.png"
+            alt="jkb-logo"
+            draggable="false"
+          />
+          <li><a id="home" href="home.html" draggable="false">Home</a></li>
+          <li onclick="showDropdown()">
+            <a id="courses" href="javascript:void(0)" draggable="false"
+              >Courses&nbsp;<img src="images/drop_down.png" draggable="false"
+            /></a>
+            <div id="dropdown" class="hidden">
+              <a href="#" draggable="false">Engg. Admission Counselling</a>
+              <a href="#" draggable="false">1st Year Programming</a>
+              <a href="#" draggable="false">1st Year Engg. Coaching</a>
+              <a href="#" draggable="false">IT Services for Start-Up</a>
+              <a href="#" draggable="false">2nd Year Programming</a>
+              <a href="#" draggable="false">MS in US and Europe</a>
+              <a href="#" draggable="false">3rd Year Programming</a>
+              <a href="#" draggable="false">Project and Placement</a>
+              <a href="#" draggable="false">Youth Empowerment Hub</a>
+              <a href="#" draggable="false">Financial Litracy</a>
+            </div>
+          </li>
+          <li>
+            <a id="counselling" href="#" draggable="false">Counselling</a>
+          </li>
+          <li>
+            <a id="it-services" href="itservices.html" draggable="false"
+              >IT Services</a
+            >
+          </li>
+          <li>
+            <a id="about-us" href="aboutus.html" draggable="false">About Us</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="sec-container">
+        <section id="sec-left">
+          <video controls poster="images/jkb-thumbnail.png">
+            <source src="" type="video/mp4" />
+          </video>
+          <div id="text-btn">
+            <span id="admit-title">Worried About Admission?</span>
+            <a
+              id="admission-btn"
+              class="home-btns"
+              href="./index.html"
+              draggable="false"
+              >Engg. Admission Process 2023</a
+            >
+          </div>
+          <div id="admit-btns">
+            <a
+              onclick="showContact()"
+              id="contact-us-btn"
+              class="home-btns"
+              href="#"
+              draggable="false"
+              >Contact Us</a
+            >
+            <a
+              id="predict-btn"
+              class="home-btns"
+              href="./page2.html"
+              draggable="false"
+              >Predict Engg. College</a
+            >
+          </div>
+          <div id="about">
+            <h3 style="margin-top: 0">Who we are?</h3>
+            <p>
+              JKB Education, led by Mr. Vinayak Shete, is a prestigious
+              engineering institute in India with a vision to empower and uplift
+              the country's youth in engineering under the guidance of Prof. N H
+              Dubey (Author of Engg. Mechanics, Engg. Drawing / Graphics,
+              published by TATA McGraw Hill publications).
+            </p>
+            <h3>What do we do?</h3>
+            <p>
+              JKB has continuously evolved to provide a conducive ecosystem,
+              guidance and excellent facilities to students to create their own
+              comprehensive study materials, fostering a deeper understanding of
+              the subjects and promoting independent learning and academic
+              growth throughout the 4 years engineering journey.<br />
+              At JKB, we recognize the importance of holistic development by
+              embracing spirituality and mindfulness along with academic
+              pursuit. Mr. Vinayak Shete's association with The Art of Living
+              Foundation and his role as a dynamic youth teacher at AOL enriches
+              our educational environment and creates a pleasant atmosphere that
+              enhances the overall growth of our students.
+            </p>
+          </div>
+        </section>
+        <h1>Our Courses</h1>
+        <section id="sec-right">
+          <div class="course-cards">
+            <img
+              src="https://jkbstaticservices.s3.ap-south-1.amazonaws.com/1st-Year-Engg-Counselling.jpg"
+              draggable="false"
+            />
+            <div>Engg. Admission Counselling</div>
+          </div>
+          <div class="course-cards">
+            <img
+              src="https://jkbstaticservices.s3.ap-south-1.amazonaws.com/1st-Year-Programming.jpg"
+              draggable="false"
+            />
+            <div>1st Year Programming</div>
+          </div>
+          <div class="course-cards">
+            <img
+              src="https://jkbstaticservices.s3.ap-south-1.amazonaws.com/1st-Year-Engg.jpg"
+              draggable="false"
+            />
+            <div>1st Year Engg. Coaching</div>
+          </div>
+          <div class="course-cards">
+            <img
+              src="https://jkbstaticservices.s3.ap-south-1.amazonaws.com/IT-Services-for-Start-Up.jpg"
+              draggable="false"
+            />
+            <div>IT Services for Start-Up</div>
+          </div>
+          <div class="course-cards">
+            <img
+              src="https://jkbstaticservices.s3.ap-south-1.amazonaws.com/2nd-Year-Programming.jpg"
+              draggable="false"
+            />
+            <div>2nd Year Programming</div>
+          </div>
+          <div class="course-cards">
+            <img
+              src="https://jkbstaticservices.s3.ap-south-1.amazonaws.com/MS-in-US-%26-Europe.jpg"
+              draggable="false"
+            />
+            <div>MS in US & Europe</div>
+          </div>
+          <div class="course-cards">
+            <img
+              src="https://jkbstaticservices.s3.ap-south-1.amazonaws.com/3rd-Year-Programming.jpg"
+              draggable="false"
+            />
+            <div>3rd Year Programming</div>
+          </div>
+          <div class="course-cards">
+            <img
+              src="https://jkbstaticservices.s3.ap-south-1.amazonaws.com/Project-and-Placement.jpg"
+              draggable="false"
+            />
+            <div>Project & Placement</div>
+          </div>
+          <div class="course-cards">
+            <img
+              src="https://jkbstaticservices.s3.ap-south-1.amazonaws.com/Financial-Literacy.jpg"
+              draggable="false"
+            />
+            <div>Financial Literacy</div>
+          </div>
+          <div class="course-cards">
+            <img
+              src="https://jkbstaticservices.s3.ap-south-1.amazonaws.com/Youth-Empowerment-Skills.jpg"
+              draggable="false"
+            />
+            <div>Youth Empowerment Hub</div>
+          </div>
+        </section>
+      </div>
+      <div id="second-wrapper">
+        <section id="wrap-left">
+          <div class="achievements">
+            <img src="images/counselling.png" />
+            <div>45,000+</div>
+            <p>Counselling<br />Students</p>
+          </div>
+          <div class="achievements">
+            <img src="images/students.png" />
+            <div>10,000+</div>
+            <p>Students<br />Trained</p>
+          </div>
+          <div class="achievements">
+            <img src="images/startup.png" />
+            <div>250+</div>
+            <p>Start-Up<br />Projects<br />Completed</p>
+          </div>
+        </section>
+        <section id="wrap-right">
+          <h3>4 Years of Mentorship Throughout Your Engineering Journey</h3>
+          <p>
+            Let us embark on a transformative and fulfilling 4-year engineering
+            journey with JKB Education & Vinayak sir, where you will be entitled
+            for the following perks
+          </p>
+          <ul>
+            <li>&nbsp;expert coaching in 1st year of engineering</li>
+            <li>&nbsp;preparation of placements in 2nd year</li>
+            <li>
+              specialised industrial training through industrial courses in 3rd
+              year
+            </li>
+            <li>
+              experience in impactful projects & remarkable placement in final
+              year
+            </li>
+          </ul>
+          <p>
+            You can also opt for MS abroad opportunities, pathways to
+            prestigious careers or entrepreneurship to build your own startup,
+            or premium government jobs. Unleash your potential and shape a
+            future that knows no bounds with JKB.
+          </p>
+        </section>
+      </div>
+      <div id="testimonials">
+        <h1>Testimonials</h1>
+        <div id="videos">
+          <div class="video-box">
+            <iframe
+              src="https://www.youtube.com/embed/G5g8Gfo8Qc8/?loop=1&rel=0&fs=0&modestbranding=1"
+            ></iframe>
+            <!-- <div>Chiranjiv Nagrajan</div> -->
+          </div>
+          <div class="video-box">
+            <iframe
+              src="https://www.youtube.com/embed/MbP4Nq-ngQU/?loop=1&rel=0&fs=0&modestbranding=1"
+            ></iframe>
+            <!-- <div>Pranil Balshankar</div> -->
+          </div>
+          <div class="video-box">
+            <iframe
+              src="https://www.youtube.com/embed/YD0qA5g5Evo/?loop=1&rel=0&fs=0&modestbranding=1"
+            ></iframe>
+            <!-- <div>Shravan Chilka</div> -->
+          </div>
+          <div class="video-box">
+            <iframe
+              src="https://www.youtube.com/embed/4Gg0j29m1CY/?loop=1&rel=0&fs=0&modestbranding=1"
+            ></iframe>
+            <!-- <div>Darshana Nikam</div> -->
+          </div>
+          <div class="video-box">
+            <iframe
+              src="https://www.youtube.com/embed/_ee8q5YHW1c/?loop=1&rel=0&fs=0&modestbranding=1"
+            ></iframe>
+            <!-- <div>Harshal Bhoir</div> -->
+          </div>
+          <div class="video-box">
+            <iframe
+              src="https://www.youtube.com/embed/AjplxM1tgd4/?loop=1&rel=0&fs=0&modestbranding=1"
+            ></iframe>
+            <!-- <div>Vishwas Paighan</div> -->
+          </div>
+        </div>
+      </div>
+      <div id="contact-popup">
+        <span id="contact-head">Contact Us</span>
+        <span id="cross">&times;</span>
+        <form action="" id="contact-form">
+          <div>
+            <label>Name</label><br />
+            <input
+              type="text"
+              placeholder="Click here to enter Name"
+              class="contact-input"
+            />
+          </div>
+          <div>
+            <label>Phone Number</label><br />
+            <input
+              type="text"
+              placeholder="Click here to enter Contact Number"
+              class="contact-input"
+            />
+          </div>
+          <div>
+            <label>Email ID</label><br />
+            <input
+              type="email"
+              placeholder="Click here to enter Email"
+              class="contact-input"
+            />
+          </div>
+          <div>
+            <label>Address</label><br />
+            <input
+              type="text"
+              placeholder="Click here to enter Address"
+              class="contact-input"
+            />
+          </div>
+          <div>
+            <label>Purpose</label><br />
+            <input
+              type="text"
+              placeholder="Click here to enter Purpose"
+              class="contact-input"
+            />
+          </div>
+          <div>
+            <button>Submit Details</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
