@@ -1,38 +1,40 @@
-let predictbtn = document.getElementById("predict-college");
-
-predictbtn.addEventListener("click", function () {
-  // console.log("Helllo");
+//To show popup of college list by score
+const predictCollegeBtn = document.getElementById("predict-college-btn");
+predictCollegeBtn.addEventListener("click", function () {
+  scrollTop();
   document.querySelector(".overlay").classList.add("showoverlay");
-  document.querySelector(".predict-clg-div-popup").classList.add("show-pop-up");
+  document
+    .querySelector(".predict-clg-popup")
+    .classList.add("show-score-popup");
 });
 
-let closebtn = document.querySelector("#cross");
-
-closebtn.addEventListener("click", function () {
+const closebtn1 = document.getElementById("cross1");
+closebtn1.addEventListener("click", function () {
   document.querySelector(".overlay").classList.remove("showoverlay");
-  //   document.querySelector("#shortlist-clg-names").innerHTML = "";
   document
-    .querySelector(".predict-clg-div-popup")
-    .classList.remove("show-pop-up");
+    .querySelector(".predict-clg-popup")
+    .classList.remove("show-score-popup");
 });
 
-document.querySelector("#fifth-row-btn").addEventListener("click", function () {
-  // console.log("predict");
+const predictBtn = document.getElementById("predict-btn");
+predictBtn.addEventListener("click", function () {
+  disableScroll();
+  scrollTop();
   document.querySelector(".overlay").classList.remove("showoverlay");
   document
-    .querySelector(".predict-clg-div-popup")
-    .classList.remove("show-pop-up");
-
-  // document.querySelector('.submission-form').classList.add('show-submit-form-pop-up');
+    .querySelector(".predict-clg-popup")
+    .classList.remove("show-score-popup");
   document.querySelector(".overlay").classList.add("showoverlay");
   document.querySelector(".shortlist-clg").classList.add("show-shortlist-clg");
 });
 
-document.getElementById("cross3").addEventListener("click", function () {
+const closebtn3 = document.getElementById("cross3");
+closebtn3.addEventListener("click", function () {
+  enableScroll();
   document.querySelector(".overlay").classList.remove("showoverlay");
   document.querySelector(
     "#shortlist-clg-names"
-  ).innerHTML = `<ul class="shortlist-clg-title" id="shortlist-clg-title-main">
+  ).innerHTML = `<ul class="shortlist-clg-list" id="shortlist-clg-title">
   <li class="sr-no">Sr No.</li>
   <li class="college-code">Code</li>
   <li class="college-name">College Name</li>
@@ -46,49 +48,46 @@ document.getElementById("cross3").addEventListener("click", function () {
     .classList.remove("show-shortlist-clg");
 });
 
-// let closebtn1 = document.querySelector('#cross1');
+//To show popup of college list by district
+const listCollegeBtn = document.getElementById("list-of-college-btn");
+listCollegeBtn.addEventListener("click", function () {
+  scrollTop();
+  document.querySelector(".overlay").classList.add("showoverlay");
+  document
+    .querySelector(".college-list-popup")
+    .classList.add("show-college-list-popup");
+});
 
-// closebtn1.addEventListener('click',function(){
-//     console.log('closing');
-//     document.querySelector('.submission-form').classList.remove('show-submit-form-pop-up');
-// })
-
-//To show popup of college list
-document
-  .getElementById("list-of-college")
-  .addEventListener("click", function () {
-    document.querySelector(".overlay").classList.add("showoverlay");
-    document
-      .querySelector(".college-list-div")
-      .classList.add("show-college-list-div");
-  });
-
-document.getElementById("cross2").addEventListener("click", function () {
+const closebtn2 = document.getElementById("cross2");
+closebtn2.addEventListener("click", function () {
   document.querySelector(".overlay").classList.remove("showoverlay");
   document
-    .querySelector(".college-list-div")
-    .classList.remove("show-college-list-div");
+    .querySelector(".college-list-popup")
+    .classList.remove("show-college-list-popup");
 });
 
 //To show shorlist clg list
-document
-  .getElementById("search-clg-btn")
-  .addEventListener("click", function () {
-    document.querySelector(".overlay").classList.remove("showoverlay");
-    document
-      .querySelector(".college-list-div")
-      .classList.remove("show-college-list-div");
-    document.querySelector(".overlay").classList.add("showoverlay");
-    document
-      .querySelector(".shortlist-clg-new")
-      .classList.add("show-shortlist-clg-new");
-  });
+const searchBtn = document.getElementById("search-clg-btn");
+searchBtn.addEventListener("click", function () {
+  disableScroll();
+  scrollTop();
+  document.querySelector(".overlay").classList.remove("showoverlay");
+  document
+    .querySelector(".college-list-popup")
+    .classList.remove("show-college-list-popup");
+  document.querySelector(".overlay").classList.add("showoverlay");
+  document
+    .querySelector(".shortlist-clg-new")
+    .classList.add("show-shortlist-clg-new");
+});
 
-document.getElementById("cross3-new").addEventListener("click", function () {
+const closebtn4 = document.getElementById("cross4");
+closebtn4.addEventListener("click", function () {
+  enableScroll();
   document.querySelector(".overlay").classList.remove("showoverlay");
   document.querySelector(
     "#shortlist-clg-names-new"
-  ).innerHTML = `<ul class="shortlist-clg-title-new" id="shortlist-clg-title-new-main">
+  ).innerHTML = `<ul class="shortlist-clg-list-new" id="shortlist-clg-title-new">
   <li class="srno">Sr No.</li>
   <li class="uni">University</li>
   <li class="locn">Location</li>
@@ -101,3 +100,23 @@ document.getElementById("cross3-new").addEventListener("click", function () {
     .querySelector(".shortlist-clg-new")
     .classList.remove("show-shortlist-clg-new");
 });
+
+// let closebtn5 = document.querySelector('#cross5');
+// closebtn5.addEventListener('click',function(){
+//     document.querySelector('.submission-form').classList.remove('show-submit-form-pop-up');
+// })
+
+function scrollTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+function disableScroll() {
+  const body = document.querySelector("body");
+  body.style.overflow = "hidden";
+}
+
+function enableScroll() {
+  const body = document.querySelector("body");
+  body.style.overflow = "auto";
+}

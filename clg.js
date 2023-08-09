@@ -22,7 +22,6 @@ searchbtn.addEventListener("click", function () {
   };
   console.log(searchfor);
 
-  let result = "";
   fetch("https://api.jkbeducation.com/api/v1/list-colleges-by-region-local", {
     method: "POST",
     body: JSON.stringify(searchfor),
@@ -37,7 +36,7 @@ searchbtn.addEventListener("click", function () {
 
       for (let i = 0; i < len; i++) {
         let ul = document.createElement("ul");
-        ul.setAttribute("class", "shortlist-clg-title-new");
+        ul.setAttribute("class", "shortlist-clg-list-new");
 
         let text = document.createTextNode(`${i + 1}`);
         let li = document.createElement("li");

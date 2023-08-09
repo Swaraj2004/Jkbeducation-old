@@ -1,4 +1,4 @@
-let predbtn = document.getElementById("fifth-row-btn");
+let predbtn = document.getElementById("predict-btn");
 
 predbtn.addEventListener("click", function () {
   let name = document.getElementById("name").value;
@@ -59,7 +59,7 @@ predbtn.addEventListener("click", function () {
 
       for (let i = 0; i < len; i++) {
         let ul = document.createElement("ul");
-        ul.setAttribute("class", "shortlist-clg-title");
+        ul.setAttribute("class", "shortlist-clg-list");
 
         let li = document.createElement("li");
         let text = document.createTextNode(`${i + 1}`);
@@ -124,7 +124,7 @@ predbtn.addEventListener("click", function () {
         });
         document.querySelector(
           "#shortlist-clg-names"
-        ).innerHTML = `<ul class="shortlist-clg-title" id="shortlist-clg-title-main">
+        ).innerHTML = `<ul class="shortlist-clg-list" id="shortlist-clg-title">
           <li class="sr-no">Sr No.</li>
           <li class="college-code">Code</li>
           <li class="college-name">College Name</li>
@@ -135,7 +135,7 @@ predbtn.addEventListener("click", function () {
         </ul>`;
         for (let i = 0; i < len; i++) {
           let ul = document.createElement("ul");
-          ul.setAttribute("class", "shortlist-clg-title");
+          ul.setAttribute("class", "shortlist-clg-list");
 
           let li = document.createElement("li");
           let text = document.createTextNode(`${i + 1}`);
@@ -193,7 +193,7 @@ predbtn.addEventListener("click", function () {
         let sortScoreArr = JSON.parse(resultStr)["result"];
         document.querySelector(
           "#shortlist-clg-names"
-        ).innerHTML = `<ul class="shortlist-clg-title" id="shortlist-clg-title-main">
+        ).innerHTML = `<ul class="shortlist-clg-list" id="shortlist-clg-title">
           <li class="sr-no">Sr No.</li>
           <li class="college-code">Code</li>
           <li class="college-name">College Name</li>
@@ -204,7 +204,7 @@ predbtn.addEventListener("click", function () {
         </ul>`;
         for (let i = 0; i < len; i++) {
           let ul = document.createElement("ul");
-          ul.setAttribute("class", "shortlist-clg-title");
+          ul.setAttribute("class", "shortlist-clg-list");
 
           let li = document.createElement("li");
           let text = document.createTextNode(`${i + 1}`);
@@ -274,7 +274,5 @@ predbtn.addEventListener("click", function () {
       //     }
       // }
     });
-  // console.log(result);
-
   // console.log(result);
 });

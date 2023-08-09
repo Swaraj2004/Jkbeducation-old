@@ -58,15 +58,14 @@ function hideMenu(e) {
 
 function showContact() {
   let contactPopup = document.getElementById("contact-popup");
-  // let container = document.querySelector("body");
   let cross = document.getElementById("cross");
   let overlay = document.getElementById("overlay");
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
   overlay.style.display = "block";
   contactPopup.style.zIndex = 5;
-  // container.style.overflow = "hidden";
   cross.onclick = () => {
     contactPopup.style.zIndex = -1;
     overlay.style.display = "none";
-    // container.style.overflow = "auto";
   };
 }
