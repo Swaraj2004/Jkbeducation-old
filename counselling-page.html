@@ -1,99 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-  <title>counselling</title>
-  <link rel="icon" type="image/x-icon" href="images/jkb_logo.ico">
-  <link rel="stylesheet" href="counselling-page.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <title>JKB ENGG</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="counselling-page.css" />
+  </head>
+  <body>
     <div id="container">
-        <nav>
-          <div id="nav-left">
-            <div id="jkb-logo"><img src="images/jkb_logo.png" alt="restaurant-logo" draggable="false"></div>
-            <div id="social">
-              <div id="whatsapp"><img class="social-icons" src="images/whatsapp.png" draggable="false"><p></p></div>
-              <div id="youtube"><img class="social-icons" src="images/youtube.png" draggable="false"><p></p></div>
-              <div id="insta"><img class="social-icons" src="images/instagram.png" draggable="false"><p></p></div>
-              <div id="linkdn"><img class="social-icons" src="images/linkedin.png" draggable="false"><p></p></div>
+      <nav>
+        <div id="nav-left">
+          <img
+            id="menu-icon"
+            onclick="showMenu()"
+            src="images/menu.png"
+            alt="="
+          />
+          <img
+            id="jkb-logo"
+            src="images/jkb_logo.png"
+            alt="jkb-logo"
+            draggable="false"
+          />
+          <div id="social">
+            <div id="whatsapp">
+              <a
+                href="https://api.whatsapp.com/send/?phone=919768455222&text=Hi&type=phone_number&app_absent=0"
+                target="_blank"
+                draggable="false"
+                ><img
+                  class="social-icons"
+                  src="images/whatsapp.png"
+                  draggable="false"
+              /></a>
+            </div>
+            <div id="phone">
+              <a href="tel:+919768455222" target="_blank" draggable="false"
+                ><img
+                  class="social-icons"
+                  src="images/phone.png"
+                  draggable="false"
+              /></a>
+            </div>
+            <div id="youtube">
+              <a
+                href="https://www.youtube.com/channel/UC0lmhygv8wJTQbVjF-6QUVg"
+                target="_blank"
+                draggable="false"
+                ><img
+                  class="social-icons"
+                  src="images/youtube.png"
+                  draggable="false"
+              /></a>
+            </div>
+            <div id="insta">
+              <a
+                href="https://www.instagram.com/jkb_education_group/"
+                target="_blank"
+                draggable="false"
+                ><img
+                  class="social-icons"
+                  src="images/instagram.png"
+                  draggable="false"
+              /></a>
+            </div>
+            <div id="linkdn">
+              <a
+                href="https://in.linkedin.com/company/jkb-education-group?trk=public_profile_topcard-current-company"
+                target="_blank"
+                draggable="false"
+                ><img
+                  class="social-icons"
+                  src="images/linkedin.png"
+                  draggable="false"
+              /></a>
             </div>
           </div>
-          <div id="nav-right">
-            <a id="home" href="#">Home</a>
-            <a id="courses" href="#">Courses</a>
-            <a id="counselling" href="#">Counselling</a>
-            <a id="it-services" href="#">IT Services</a>
-            <a id="about-us" href="#">About Us</a>
+        </div>
+        <div id="overlay"></div>
+        <ul id="menu" class="hidemenu">
+          <img id="cross-icon" src="images/cross.png" alt="=" />
+          <img
+            id="jkb-logo-menu"
+            src="images/jkb_logo.png"
+            alt="jkb-logo"
+            draggable="false"
+          />
+          <li><a id="home" href="home.html" draggable="false">Home</a></li>
+          <li onclick="showDropdown()">
+            <a id="courses" href="javascript:void(0)" draggable="false"
+              >Courses&nbsp;<img src="images/drop_down.png" draggable="false"
+            /></a>
+            <div id="dropdown" class="hidden">
+              <a href="#" draggable="false">Engg. Admission Counselling</a>
+              <a href="#" draggable="false">1st Year Programming</a>
+              <a href="#" draggable="false">1st Year Engg. Coaching</a>
+              <a href="#" draggable="false">IT Services for Start-Up</a>
+              <a href="#" draggable="false">2nd Year Programming</a>
+              <a href="#" draggable="false">MS in US and Europe</a>
+              <a href="#" draggable="false">3rd Year Programming</a>
+              <a href="#" draggable="false">Project and Placement</a>
+              <a href="#" draggable="false">Youth Empowerment Hub</a>
+              <a href="#" draggable="false">Financial Litracy</a>
+            </div>
+          </li>
+          <li>
+            <a id="counselling" href="#" draggable="false">Counselling</a>
+          </li>
+          <li>
+            <a id="it-services" href="it-services.html" draggable="false"
+              >IT Services</a
+            >
+          </li>
+          <li>
+            <a id="about-us" href="about-us.html" draggable="false">About Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="first-wrapper">
+        <div id="video-sec">
+          <!-- <div> -->
+          <video controls poster="images/jkb-thumbnail.png">
+            <source src="" type="video/mp4" />
+          </video>
+          <!-- </div> -->
+        </div>
+        <div id="heading-sec">Engg. Admission Counselling</div>
+        <div id="info-sec">
+          <ul>
+            <li><b>350+</b> Engineering Colleges in Entire Maharastra</li>
+            <li><b>65+</b> Colleges Ranking in Mumbai</li>
+            <li><b>120+</b> Colleges in Pune University</li>
+            <li>
+              <b>25+</b> Engineering Branches (CSE vs IT vs AI ML vs AI DS vs
+              IoT)
+            </li>
+            <li>
+              <b>Grade & Placement</b> of College (Intercollegiate Ranking)
+            </li>
+            <li>Teaching Staff, Campus, Location for daily Travel & Hostel</li>
+            <li>CAP Rounds, Cut-off, OPTION form & All Documents</li>
+            <li>ARC, SC & FC Centers</li>
+            <li>1st Year Engineering & 4 Years of Journey</li>
+          </ul>
+          <div id="img-text-div">
+            <div>
+              <img src="./images/calender.png" alt="calender" />
+              <span>College Ranking Seminar / Webinar</span>
+            </div>
+            <div>
+              <img src="./images/clock.png" alt="clock" />
+              <span
+                >FEES / DISTANCE /TRAVEL TIME / HOSTEL ADMISSION TO PLACEMENT
+                JOURNEY</span
+              >
+            </div>
+            <div>
+              <img src="./images/msg.png" alt="msg" />
+              <span>TFWS & EWS SEATS</span>
+            </div>
           </div>
-        </nav>
-    </div>
-
-    <div id="part-one">
-        <div id="part-one-left">
-            <video controls poster="images/jkb-thumbnail.png" >
-                <source src="https://staticservices.s3.ap-south-1.amazonaws.com/videos/Engg.+Admission+Counseling.mp4" type='video/mp4'>
-            </video>
         </div>
-
-        <div id="part-one-right">
-            <div id="part-one-right-first">
-                Engg. Admission Counselling
-            </div>
-
-            <div id="part-one-right-second">
-                <p><b>350+</b> Engineering Colleges in Entire Maharastra </p>
-                <p><b>65+</b> Colleges Ranking in Mumbai </p>
-                <p><b>120+</b> Colleges in Pune University </p>
-                <p><b>25+</b> Engineering Branches (CSE vs IT vs AI ML vs AI DS vs IoT)</p>
-                <p><b>Grade & Placement</b> of College (Intercollegiate Ranking)</p>
-                
-                <p>CAP Rounds, Cut-off, OPTION form & All Documents</p>
-                <p>ARC, SC & FC Centers</p>
-                <p>1st Year Engineering & 4 Years of Journey</p>
-            </div>
-
-            <div id="part-one-right-third">
-                <div>
-                    <img src="./images/calender.png" alt="calender"><span>College Ranking Seminar / Webinar</span>
-                </div>
-                <div>
-                    <img src="./images/clock.png" alt="clock"><span>FEES / DISTANCE /TRAVEL TIME / HOSTEL ADMISSION TO PLACEMENT JOURNEY</span>
-                </div>
-                <div>
-                    <img src="./images/msg.png" alt="msg"><span>TFWS & EWS SEATS</span>
-                </div>
-            </div>
-            
-            <div id="part-one-right-fourth">
-                <button id="part-one-right-fourth-btn">Enroll Now</button>
-            </div>
+        <div id="enroll-sec">
+          <button id="contact-us-btn" onclick="showContact()" type="button">
+            Enroll Now
+          </button>
         </div>
-    </div>
+      </div>
 
-    <div id="part-two">
-        <div id="part-two-left"> 
-            Not Sure which College ?
-        </div>
-        <div id="part-two-right">
-            <form action="./index.html">        <!-- Just to link or navigate through pages-->
-                <button>Predict Eng College</button>
-            </form>
-        </div>
-    </div>
+      <div id="middle-wrapper">
+        <div>Not Sure which College?</div>
+        <a id="predict-btn" href="./predict-college.html" draggable="false"
+          >Predict Engg. College</a
+        >
+      </div>
 
-
-    <!--Code here-->
-
-    <footer>
-        <section id="foo-left">
+      <div id="second-wrapper">
+        <section id="wrap-left">
           <div class="achievements">
-            <img src="images/councselling.png" />
+            <img src="images/counselling.png" />
             <div>45,000+</div>
             <p>Counselling<br />Students</p>
           </div>
@@ -104,64 +201,46 @@
           </div>
           <div class="achievements">
             <img src="images/startup.png" />
-            <div>&nbsp;250+</div>
-            <p>Start-Up<br />Projects</p>
+            <div>250+</div>
+            <p>Start-Up<br />Projects<br />Completed</p>
           </div>
         </section>
-        <section id="foo-right">
-          <!-- <h3>4 Years of Mentorship Throughout Your Engineering Journey</h3>
-          <p>
-            Let us embark on a transformative and fulfilling 4-year engineering
-            journey with JKB Education & Vinayak sir, where you will be entitled
-            for the following perks
-          </p>
+        <section id="wrap-right">
           <ul>
-            <li>expert coaching in 1st year of engineering</li>
-            <li>preparation of placements in 2nd year</li>
             <li>
-              specialised industrial training through industrial courses in 3rd
-              year
+              1. 1st-Year : Foundation Programming (Independent Learner)
+              <p>
+                Master the academic subjects with amazing exam strategies to
+                secure best grades/pointers.
+              </p>
             </li>
             <li>
-              experience in impactful projects & remarkable placement in final
-              year
+              2. 2nd-Year : Competitive Programming & Aptitude for Placement
+              <p>
+                Focus on competitive programming and aptitude test preparation
+                for achieving premium placements.
+              </p>
+            </li>
+            <li>
+              3. 3rd-Year : Industrial Course Training
+              <p>
+                Gain expertise in various industrial skills through expert
+                training provided by JKBian (Ex-Student) industrial masters
+                having 35+LPA packages.
+              </p>
+            </li>
+            <li>
+              4. Projects and Mastermind for Startup
+              <p>
+                Engage in national as well as international level competitions
+                and build your startup while completing your degree or planning
+                for MS in Abroad or Government Job.
+              </p>
             </li>
           </ul>
-          <p>
-            You can also opt for MS abroad opportunities, pathways to
-            prestigious careers or entrepreneurship to build your own startup,
-            or premium government jobs. Unleash your potential and shape a
-            future that knows no bounds with JKB.
-          </p> -->
-          <p>1. 1st-Year : Foundation Programming (Independent Learner)</p>
-
-          <p>Master the academic subjects with amazing exam strategies to secure best grades/pointers.</p>
-            <p>
-                2. 2nd-Year : Competitive Programming & Aptitude for Placement
-            </p>
-            <p>
-                Focus on competitive programming and aptitude test preparation for achieving premium placements.
-            </p>    
-            <p>
-                3. 3rd-Year : Industrial Course Training
-            </p>
-            <p>
-                Gain expertise in various industrial skills through expert training provided by JKBian (Ex-Student)
-            </p>
-            <p>
-                industrial masters having 35+LPA packages.
-            </p>
-            <p>
-                4. Projects and Mastermind for Startup
-            </p>
-            <p>
-                Engage in national as well as international level competitions and build your startup while completing
-            </p>
-            <p>
-                your degree or planning for MS in Abroad or Government Job</p>
-            </p>
         </section>
-      </footer>
+      </div>
+
       <div id="testimonials">
         <h1>Testimonials</h1>
         <div id="videos">
@@ -203,6 +282,57 @@
           </div>
         </div>
       </div>
-    
-</body>
+
+      <div id="contact-popup">
+        <span id="contact-head">Contact Us</span>
+        <span id="cross">&times;</span>
+        <form action="" id="contact-form">
+          <div>
+            <label>Name</label><br />
+            <input
+              type="text"
+              placeholder="Click here to enter Name"
+              class="contact-input"
+            />
+          </div>
+          <div>
+            <label>Phone Number</label><br />
+            <input
+              type="text"
+              placeholder="Click here to enter Contact Number"
+              class="contact-input"
+            />
+          </div>
+          <div>
+            <label>Email ID</label><br />
+            <input
+              type="email"
+              placeholder="Click here to enter Email"
+              class="contact-input"
+            />
+          </div>
+          <div>
+            <label>Address</label><br />
+            <input
+              type="text"
+              placeholder="Click here to enter Address"
+              class="contact-input"
+            />
+          </div>
+          <div>
+            <label>Purpose</label><br />
+            <input
+              type="text"
+              placeholder="Click here to enter Purpose"
+              class="contact-input"
+            />
+          </div>
+          <div>
+            <button>Submit Details</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

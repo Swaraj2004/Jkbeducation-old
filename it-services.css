@@ -330,7 +330,7 @@ nav {
   width: 100%;
   height: auto;
   background-color: black;
-  border-radius: 30px;
+  border-radius: 2rem;
 }
 
 #video-container + div {

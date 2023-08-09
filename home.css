@@ -391,7 +391,7 @@ nav {
 
 #admit-title {
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: bolder;
 }
 
 #admit-btns {
@@ -407,7 +407,7 @@ nav {
   background-color: var(--accent-clr);
   color: var(--font-clr-btn);
   border: 0;
-  font-weight: 900;
+  font-weight: bolder;
   padding: 0.9rem;
   width: 20rem;
   border-radius: 1rem;
@@ -836,6 +836,10 @@ nav {
       margin: 0 auto;
       width: 16rem;
       grid-template-rows: 50% 15% 35%;
+    }
+
+    #wrap-right {
+      max-height: fit-content;
     }
 
     #wrap-right p {
