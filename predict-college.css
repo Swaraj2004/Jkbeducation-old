@@ -714,7 +714,7 @@ nav {
   width: 8%;
 }
 
-/* Info and testimonials */
+/* Info */
 #second-wrapper {
   min-height: 15rem;
   margin: 2rem 2.5%;
@@ -771,37 +771,6 @@ nav {
   list-style-type: disc;
   font-size: 0.8rem;
   line-height: 1.2rem;
-}
-
-#testimonials {
-  margin: 2.5rem 2.5% 0;
-}
-
-#testimonials h1 {
-  font-size: 1.6rem;
-  font-weight: bolder;
-  color: var(--accent-clr);
-  text-align: center;
-  margin: 2rem 0;
-}
-
-#videos {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-}
-
-.video-box iframe {
-  width: 12.5rem;
-  height: 11.25rem;
-  background-color: black;
-  border-radius: 1rem;
-}
-
-.video-box div {
-  text-align: center;
-  margin: 0.3rem;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -941,6 +910,7 @@ nav {
 
     #menu > li > a:hover {
       background-color: transparent;
+      color: var(--accent-clr);
     }
 
     #courses {
@@ -960,7 +930,6 @@ nav {
 
     #dropdown > a:hover {
       background-color: transparent;
-      color: var(--font-clr);
     }
 
     #dropdown > a:first-of-type {
@@ -998,7 +967,7 @@ nav {
       grid-row-start: 6;
     }
 
-    /* Info and testimonials */
+    /* Info */
     #second-wrapper {
       grid-template-columns: 1fr;
       margin: 3rem 2.5%;
@@ -1006,6 +975,7 @@ nav {
 
     #wrap-left {
       height: 15rem;
+      grid-row-start: 2;
     }
 
     .achievements {
@@ -1022,29 +992,12 @@ nav {
       font-size: 1rem;
     }
 
-    #videos {
-      flex-wrap: nowrap;
-      overflow-x: scroll;
-      justify-content: flex-start;
-      scroll-snap-type: x mandatory;
-    }
-
-    .video-box {
-      scroll-snap-align: start;
-    }
-
-    .video-box iframe {
-      height: 15rem;
-      width: 16rem;
-      margin-bottom: 1rem;
-    }
-
     @media (max-width: 768px) {
       #predict-div-3 {
         gap: 1rem;
       }
 
-      /* Info and testimonials */
+      /* Info */
       #wrap-left {
         height: 13rem;
       }
@@ -1094,7 +1047,7 @@ nav {
         width: 100%;
       }
 
-      /* Info and testimonials */
+      /* Info */
       #wrap-left {
         gap: 1rem;
         height: 100%;
@@ -1129,29 +1082,14 @@ nav {
         font-size: 1rem;
       }
 
-      .video-box iframe {
-        height: 14rem;
-        width: 15rem;
-      }
-
       @media (max-width: 400px) {
         html {
           font-size: 11px;
         }
 
-        .video-box iframe {
-          height: 13rem;
-          width: 14rem;
-        }
-
         @media (max-width: 300px) {
           html {
             font-size: 10px;
-          }
-
-          .video-box iframe {
-            height: 12rem;
-            width: 13rem;
           }
         }
       }

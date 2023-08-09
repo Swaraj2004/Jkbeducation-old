@@ -4,6 +4,7 @@
   --bg-sec-light: #17242b;
   --accent-clr: #fa8b26;
   --font-clr: #eeeeee;
+  --font-clr-btn: #ffffff;
   --scroll-clr: #8d9599;
 }
 
@@ -226,7 +227,7 @@ nav {
 #menu > li > a {
   text-decoration: none;
   cursor: pointer;
-  color: var(--font-clr);
+  color: var(--font-clr-btn);
   font-size: 0.9rem;
   font-weight: bold;
   padding: 0.5rem 0.75rem;
@@ -268,7 +269,7 @@ nav {
 
 #dropdown > a {
   display: block;
-  color: var(--font-clr);
+  color: var(--font-clr-btn);
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: bold;
@@ -516,6 +517,7 @@ nav {
 
     #menu > li > a:hover {
       background-color: transparent;
+      color: var(--accent-clr);
     }
 
     #courses {
@@ -535,7 +537,6 @@ nav {
 
     #dropdown > a:hover {
       background-color: transparent;
-      color: var(--font-clr);
     }
 
     #dropdown > a:first-of-type {

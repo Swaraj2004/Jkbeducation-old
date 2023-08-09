@@ -743,6 +743,7 @@ nav {
 
     #menu > li > a:hover {
       background-color: transparent;
+      color: var(--accent-clr);
     }
 
     #courses {
