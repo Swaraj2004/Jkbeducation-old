@@ -125,8 +125,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-main) !important;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.04rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05rem;
   color: var(--font-clr);
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -184,7 +184,7 @@ table {
 #container {
   position: relative;
   max-width: 2000px;
-  padding: 0 0 2.5rem;
+  /* padding: 0; */
   margin: 0 auto;
   /* overflow-x: hidden; */
 }
@@ -229,7 +229,6 @@ nav {
   text-decoration: none;
   cursor: pointer;
   color: var(--font-clr-btn);
-  font-size: 0.9rem;
   font-weight: bold;
   padding: 0.5rem 0.75rem;
 }
@@ -251,7 +250,6 @@ nav {
   position: absolute;
   left: 0;
   top: 2rem;
-  font-size: 1rem;
   width: max-content;
   background-color: var(--bg-sec-light);
   border-radius: 0.5rem;
@@ -272,7 +270,7 @@ nav {
   display: block;
   color: var(--font-clr-btn);
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: bold;
   padding: 1rem 0.75rem;
 }
@@ -345,7 +343,7 @@ nav {
 #predict-div {
   display: flex;
   flex-direction: column;
-  /* padding: 2.5rem 0; */
+  padding: 0 2.5%;
   margin-top: 2.5rem;
 }
 
@@ -356,7 +354,8 @@ nav {
 }
 
 #predict-div-1 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 #predict-div-2 {
@@ -375,13 +374,15 @@ nav {
 #predict-div-3 button {
   background-color: var(--accent-clr);
   color: var(--font-clr-btn);
-  font-family: "Poppins";
+  font-family: "Roboto";
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: bolder;
   border-radius: 1rem;
   height: 2.5rem;
   border: 0;
   margin: 0.4rem 0;
+  padding: 0.6rem 0;
   width: 26rem;
   cursor: pointer;
 }
@@ -443,6 +444,7 @@ nav {
   font-size: 2.5rem;
   line-height: 2rem;
   cursor: pointer;
+  color: var(--font-clr-btn);
 }
 
 #predict-college-form {
@@ -465,7 +467,7 @@ nav {
   border-radius: 0.8rem;
   padding: 0.6rem;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: var(--bg-sec-light);
   text-overflow: ellipsis;
   outline: none;
@@ -493,7 +495,7 @@ nav {
   background-color: var(--accent-clr);
   border: none;
   border-radius: 1rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bolder;
   font-size: 1rem;
   cursor: pointer;
@@ -542,7 +544,7 @@ nav {
   width: 100%;
   border-radius: 0.8rem;
   padding: 0.6rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: var(--bg-sec-light);
   text-overflow: ellipsis;
   outline: none;
@@ -563,7 +565,7 @@ nav {
   background-color: var(--accent-clr);
   border: none;
   border-radius: 1rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bolder;
   font-size: 1rem;
   cursor: pointer;
@@ -751,9 +753,14 @@ nav {
 }
 
 .achievements p {
+  font-size: 1.1rem;
   font-weight: bold;
   margin: 0.5rem auto auto;
   line-height: 1.3rem;
+}
+
+.achievements:last-of-type p {
+  margin-top: 0.3rem;
 }
 
 #wrap-right {
@@ -806,7 +813,7 @@ nav {
     }
 
     #container {
-      padding: 0 0 3rem;
+      padding: 0;
     }
 
     nav {
@@ -902,16 +909,26 @@ nav {
     }
 
     #menu > li > a {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
     }
 
     #menu > li > a:active {
       color: var(--accent-clr);
     }
 
+    #menu > li > a:active > img {
+      filter: invert(52%) sepia(97%) saturate(675%) hue-rotate(344deg)
+        brightness(103%) contrast(96%);
+    }
+
     #menu > li > a:hover {
       background-color: transparent;
       color: var(--accent-clr);
+    }
+
+    #menu > li > a:hover > img {
+      filter: invert(52%) sepia(97%) saturate(675%) hue-rotate(344deg)
+        brightness(103%) contrast(96%);
     }
 
     #courses {
@@ -924,8 +941,12 @@ nav {
       background-color: transparent;
     }
 
+    .show {
+      max-height: 32rem;
+    }
+
     #dropdown > a {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       padding-left: 2rem;
     }
 
@@ -946,13 +967,30 @@ nav {
       color: var(--accent-clr) !important;
     }
 
+    #courses > img {
+      filter: invert(52%) sepia(97%) saturate(675%) hue-rotate(344deg)
+        brightness(103%) contrast(96%);
+    }
+
     /* Predict college page content */
     #video-div {
       padding-top: 6rem;
     }
 
     #video-div video {
-      width: 70%;
+      width: 75%;
+    }
+
+    #predict-div-1 {
+      font-size: 1.4rem;
+    }
+
+    #predict-div-2 {
+      font-size: 2.2rem;
+    }
+
+    #predict-div-3 button {
+      font-size: 1.2rem;
     }
 
     #predict-college-form {
@@ -985,12 +1023,22 @@ nav {
       grid-template-rows: 50% 15% 35%;
     }
 
+    .achievements img {
+      transform: scale(0.6);
+    }
+
+    .achievements:last-of-type img {
+      translate: 0 0.4rem;
+    }
+
     #wrap-right p {
-      font-size: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
     }
 
     #wrap-right > ul > li {
-      font-size: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
     }
 
     @media (max-width: 768px) {
@@ -1069,18 +1117,6 @@ nav {
 
       .achievements div {
         font-size: 1.3rem;
-      }
-
-      .achievements p {
-        font-size: 1rem;
-      }
-
-      #wrap-right p {
-        font-size: 1rem;
-      }
-
-      #wrap-right > ul > li {
-        font-size: 1rem;
       }
 
       @media (max-width: 400px) {

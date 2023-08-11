@@ -125,8 +125,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-main) !important;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.04rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05rem;
   color: var(--font-clr);
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -227,7 +227,6 @@ nav {
   text-decoration: none;
   cursor: pointer;
   color: var(--font-clr-btn);
-  font-size: 0.9rem;
   font-weight: bold;
   padding: 0.5rem 0.75rem;
 }
@@ -249,7 +248,6 @@ nav {
   position: absolute;
   left: 0;
   top: 2rem;
-  font-size: 1rem;
   width: max-content;
   background-color: var(--bg-sec-light);
   border-radius: 0.5rem;
@@ -270,7 +268,7 @@ nav {
   display: block;
   color: var(--font-clr-btn);
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: bold;
   padding: 1rem 0.75rem;
 }
@@ -553,16 +551,26 @@ nav {
     }
 
     #menu > li > a {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
     }
 
     #menu > li > a:active {
       color: var(--accent-clr);
     }
 
+    #menu > li > a:active > img {
+      filter: invert(52%) sepia(97%) saturate(675%) hue-rotate(344deg)
+        brightness(103%) contrast(96%);
+    }
+
     #menu > li > a:hover {
       background-color: transparent;
       color: var(--accent-clr);
+    }
+
+    #menu > li > a:hover > img {
+      filter: invert(52%) sepia(97%) saturate(675%) hue-rotate(344deg)
+        brightness(103%) contrast(96%);
     }
 
     #courses {
@@ -575,8 +583,12 @@ nav {
       background-color: transparent;
     }
 
+    .show {
+      max-height: 32rem;
+    }
+
     #dropdown > a {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       padding-left: 2rem;
     }
 
@@ -621,18 +633,29 @@ nav {
     }
 
     .heading {
-      line-height: 1.5rem;
+      font-size: 1.5rem;
+      line-height: 1.8rem;
       margin-right: 1rem;
     }
 
     .subtext {
-      line-height: 1.4rem;
+      font-size: 1.3rem;
+      line-height: 1.7rem;
       margin-right: 1rem;
     }
 
     #second-sec {
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
+    }
+
+    .card img + div {
+      font-size: 1.4rem;
+    }
+
+    .card > div:last-of-type {
+      font-size: 1.2rem;
+      line-height: 1.3rem;
     }
 
     #third-sec {
@@ -642,6 +665,10 @@ nav {
 
     #technologies {
       gap: 1rem 1.5rem;
+    }
+
+    #technologies div {
+      font-size: 1.3rem;
     }
 
     #fields {

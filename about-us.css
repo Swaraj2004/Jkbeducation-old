@@ -125,8 +125,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-main) !important;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.04rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05rem;
   color: var(--font-clr);
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -228,7 +228,6 @@ nav {
   text-decoration: none;
   cursor: pointer;
   color: var(--font-clr-btn);
-  font-size: 0.9rem;
   font-weight: bold;
   padding: 0.5rem 0.75rem;
 }
@@ -250,7 +249,6 @@ nav {
   position: absolute;
   left: 0;
   top: 2rem;
-  font-size: 1rem;
   width: max-content;
   background-color: var(--bg-sec-light);
   border-radius: 0.5rem;
@@ -271,7 +269,7 @@ nav {
   display: block;
   color: var(--font-clr-btn);
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: bold;
   padding: 1rem 0.75rem;
 }
@@ -508,16 +506,26 @@ nav {
     }
 
     #menu > li > a {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
     }
 
     #menu > li > a:active {
       color: var(--accent-clr);
     }
 
+    #menu > li > a:active > img {
+      filter: invert(52%) sepia(97%) saturate(675%) hue-rotate(344deg)
+        brightness(103%) contrast(96%);
+    }
+
     #menu > li > a:hover {
       background-color: transparent;
       color: var(--accent-clr);
+    }
+
+    #menu > li > a:hover > img {
+      filter: invert(52%) sepia(97%) saturate(675%) hue-rotate(344deg)
+        brightness(103%) contrast(96%);
     }
 
     #courses {
@@ -530,8 +538,12 @@ nav {
       background-color: transparent;
     }
 
+    .show {
+      max-height: 32rem;
+    }
+
     #dropdown > a {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       padding-left: 2rem;
     }
 
@@ -553,8 +565,45 @@ nav {
     }
 
     /* About-us page content */
+    .para {
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+    }
+
     #grid-container {
       grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+      min-height: 16rem;
+    }
+
+    .name {
+      font-size: 1.4rem;
+    }
+
+    .post {
+      font-size: 1.2rem;
+    }
+
+    .about {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+
+    @media (max-width: 1024px) {
+      #grid-container {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        width: 40rem;
+        min-height: 15rem;
+      }
+
+      .card:nth-last-of-type(odd) {
+        margin-left: auto;
+      }
     }
 
     /* For Mobile View */
@@ -570,6 +619,10 @@ nav {
       /* About-us page content */
       #grid-container {
         grid-template-columns: 1fr;
+      }
+
+      .card {
+        width: auto;
       }
 
       @media (max-width: 400px) {
