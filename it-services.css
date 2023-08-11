@@ -353,6 +353,7 @@ nav {
 
 .subtext {
   font-size: 1.1rem;
+  line-height: 1.3rem;
   margin-left: 1rem;
 }
 
@@ -378,6 +379,10 @@ nav {
   font-size: 1.25rem;
   margin: 0.6rem 0;
   font-weight: bold;
+}
+
+.card > div:last-of-type {
+  line-height: 1.2rem;
 }
 
 #third-sec {
@@ -640,7 +645,7 @@ nav {
 
     .subtext {
       font-size: 1.3rem;
-      line-height: 1.7rem;
+      line-height: 1.5rem;
       margin-right: 1rem;
     }
 
