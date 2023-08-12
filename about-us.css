@@ -4,7 +4,7 @@
   --bg-sec-light: #17242b;
   --accent-clr: #fa8b26;
   --font-clr: #eeeeee;
-  --font-clr-btn: #ffffff;
+  --font-clr-light: #ffffff;
   --scroll-clr: #8d9599;
 }
 
@@ -241,7 +241,7 @@ nav {
 #menu > li > a {
   text-decoration: none;
   cursor: pointer;
-  color: var(--font-clr-btn);
+  color: var(--font-clr-light);
   font-weight: bold;
   padding: 0.5rem 0.75rem;
 }
@@ -281,7 +281,7 @@ nav {
 
 #dropdown > a {
   display: block;
-  color: var(--font-clr-btn);
+  color: var(--font-clr-light);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: bold;

@@ -4,7 +4,7 @@
   --bg-sec-light: #17242b;
   --accent-clr: #fa8b26;
   --font-clr: #eeeeee;
-  --font-clr-btn: #ffffff;
+  --font-clr-light: #ffffff;
   --scroll-clr: #8d9599;
 }
 
@@ -242,7 +242,7 @@ nav {
 #menu > li > a {
   text-decoration: none;
   cursor: pointer;
-  color: var(--font-clr-btn);
+  color: var(--font-clr-light);
   font-weight: bold;
   padding: 0.5rem 0.75rem;
 }
@@ -282,7 +282,7 @@ nav {
 
 #dropdown > a {
   display: block;
-  color: var(--font-clr-btn);
+  color: var(--font-clr-light);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: bold;
@@ -387,7 +387,7 @@ nav {
 
 #predict-div-3 button {
   background-color: var(--accent-clr);
-  color: var(--font-clr-btn);
+  color: var(--font-clr-light);
   font-family: "Roboto";
   font-size: 1rem;
   line-height: 1.5rem;
@@ -420,7 +420,7 @@ nav {
 .college-list-popup {
   border: 0.15rem solid var(--accent-clr);
   background-color: var(--bg-main);
-  color: var(--font-clr-btn);
+  color: var(--font-clr-light);
   max-width: 90%;
   border-radius: 1rem;
   box-sizing: border-box;
@@ -451,7 +451,7 @@ nav {
 }
 
 #predict-heading span {
-  color: var(--font-clr-btn);
+  color: var(--font-clr-light);
 }
 
 .cross-btn {
@@ -459,7 +459,7 @@ nav {
   font-size: 2.5rem;
   line-height: 2rem;
   cursor: pointer;
-  color: var(--font-clr-btn);
+  color: var(--font-clr-light);
 }
 
 #predict-college-form {
@@ -507,7 +507,7 @@ nav {
 #predict-btn {
   margin-top: 1rem;
   padding: 0.6rem 2rem;
-  color: var(--font-clr-btn);
+  color: var(--font-clr-light);
   background-color: var(--accent-clr);
   border: none;
   border-radius: 1rem;
@@ -578,7 +578,7 @@ nav {
 #search-clg-btn {
   margin-top: 1rem;
   padding: 0.6rem 2rem;
-  color: var(--font-clr-btn);
+  color: var(--font-clr-light);
   background-color: var(--accent-clr);
   border: none;
   border-radius: 1rem;
@@ -595,7 +595,7 @@ nav {
   height: 85vh;
   border-radius: 1rem;
   background-color: var(--bg-main);
-  color: var(--font-clr-btn);
+  color: var(--font-clr-light);
   box-sizing: border-box;
   padding: 2rem;
   position: absolute;
