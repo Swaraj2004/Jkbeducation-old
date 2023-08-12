@@ -942,12 +942,6 @@ nav {
 
     #menu > li > a:hover {
       background-color: transparent;
-      color: var(--accent-clr);
-    }
-
-    #menu > li > a:hover > img {
-      filter: invert(52%) sepia(97%) saturate(675%) hue-rotate(344deg)
-        brightness(103%) contrast(96%);
     }
 
     #courses {

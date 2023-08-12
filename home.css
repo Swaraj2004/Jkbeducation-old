@@ -771,12 +771,6 @@ nav {
 
     #menu > li > a:hover {
       background-color: transparent;
-      color: var(--accent-clr);
-    }
-
-    #menu > li > a:hover > img {
-      filter: invert(52%) sepia(97%) saturate(675%) hue-rotate(344deg)
-        brightness(103%) contrast(96%);
     }
 
     #courses {
@@ -828,8 +822,13 @@ nav {
       height: 32rem;
     }
 
+    #admit-title {
+      width: 22.2rem;
+    }
+
     .home-btns {
       font-size: 1.2rem;
+      padding: 0.8rem 1.5rem;
     }
 
     #about h3 {
@@ -953,7 +952,7 @@ nav {
 
       #admit-title {
         font-size: 1.4rem;
-        width: 19rem;
+        width: 20.7rem;
       }
 
       #admit-btns {
@@ -1012,10 +1011,6 @@ nav {
         height: auto;
       }
 
-      .home-btns {
-        font-size: 1.1rem;
-      }
-
       #text-btn {
         flex-direction: column;
       }
@@ -1025,8 +1020,10 @@ nav {
       }
 
       .home-btns {
+        font-size: 1.2rem;
         width: max-content;
         border-radius: 3rem;
+        padding: 0.8rem 1.4rem;
       }
 
       #sec-right {
@@ -1078,6 +1075,12 @@ nav {
           font-size: clamp(0.5rem, 82%, 5rem);
         }
 
+        .home-btns {
+          font-size: 1.1rem;
+          padding: 0.8rem;
+          flex-grow: 1;
+        }
+
         .video-box iframe {
           height: 13rem;
           width: 14rem;
@@ -1091,6 +1094,10 @@ nav {
           .video-box iframe {
             height: 12rem;
             width: 13rem;
+          }
+
+          .home-btns {
+            font-size: 1rem;
           }
         }
       }
