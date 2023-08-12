@@ -181,6 +181,20 @@ table {
   -moz-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+/* Hide Arrows From Input Number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
 #container {
   position: relative;
   max-width: 2000px;
@@ -406,6 +420,7 @@ nav {
 .college-list-popup {
   border: 0.15rem solid var(--accent-clr);
   background-color: var(--bg-main);
+  color: var(--font-clr-btn);
   max-width: 90%;
   border-radius: 1rem;
   box-sizing: border-box;
@@ -469,6 +484,7 @@ nav {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   background-color: var(--bg-sec-light);
+  color: var(--font-clr);
   text-overflow: ellipsis;
   outline: none;
 }
@@ -490,7 +506,7 @@ nav {
 
 #predict-btn {
   margin-top: 1rem;
-  padding: 0.5rem 2rem;
+  padding: 0.6rem 2rem;
   color: var(--font-clr-btn);
   background-color: var(--accent-clr);
   border: none;
@@ -546,6 +562,7 @@ nav {
   padding: 0.6rem;
   font-family: "Roboto", sans-serif;
   background-color: var(--bg-sec-light);
+  color: var(--font-clr);
   text-overflow: ellipsis;
   outline: none;
   box-sizing: border-box;
@@ -560,7 +577,7 @@ nav {
 
 #search-clg-btn {
   margin-top: 1rem;
-  padding: 0.5rem 2rem;
+  padding: 0.6rem 2rem;
   color: var(--font-clr-btn);
   background-color: var(--accent-clr);
   border: none;
@@ -578,6 +595,7 @@ nav {
   height: 85vh;
   border-radius: 1rem;
   background-color: var(--bg-main);
+  color: var(--font-clr-btn);
   box-sizing: border-box;
   padding: 2rem;
   position: absolute;
@@ -604,7 +622,6 @@ nav {
 }
 
 #sort-btns {
-  /* margin: 1.4rem 0; */
   margin-top: 1.4rem;
   display: flex;
   gap: 2rem;

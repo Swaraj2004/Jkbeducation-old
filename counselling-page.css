@@ -181,6 +181,20 @@ table {
   -moz-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+/* Hide Arrows From Input Number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
 #container {
   position: relative;
   max-width: 2000px;
@@ -553,13 +567,14 @@ nav {
 }
 
 #contact-popup {
-  inset: 10vh 10% auto;
+  inset: 10vh 15% auto;
   border: 0.15rem solid var(--accent-clr);
   background-color: var(--bg-main);
-  width: 60%;
+  color: var(--font-clr-btn);
+  width: 70%;
+  box-sizing: border-box;
   border-radius: 1rem;
-  margin: auto;
-  padding: 2% 3%;
+  padding: 2rem;
   position: absolute;
   z-index: -1;
 }
@@ -589,11 +604,13 @@ nav {
 
 #contact-form input {
   border: 0;
-  width: 97%;
+  width: 100%;
   border-radius: 0.8rem;
+  box-sizing: border-box;
   padding: 0.6rem;
   font-family: "Roboto", sans-serif;
   background-color: var(--bg-sec-light);
+  color: var(--font-clr);
 }
 
 #contact-form input:focus {
@@ -604,7 +621,7 @@ nav {
   background-color: var(--accent-clr);
   border: 0;
   border-radius: 0.8rem;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.5rem;
   margin: 1rem 0 0;
   color: var(--font-clr-btn);
   font-family: "Roboto", sans-serif;
@@ -947,7 +964,7 @@ nav {
 
     #contact-popup {
       inset: 10vh 10% auto;
-      padding: 3% 3%;
+      width: 80%;
     }
 
     @media (max-width: 768px) {
@@ -972,11 +989,6 @@ nav {
 
       .achievements div {
         margin-bottom: 0;
-      }
-
-      #contact-popup {
-        inset: 10vh 6% auto;
-        width: 80%;
       }
     }
 
@@ -1040,12 +1052,7 @@ nav {
       }
 
       #contact-popup {
-        inset: 10vh 3% auto;
-        width: auto;
-        padding: 5% 3%;
-      }
-
-      #contact-form input {
+        inset: 10vh 2.5% auto;
         width: 95%;
       }
 
