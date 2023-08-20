@@ -1,134 +1,7 @@
 <div id="container">
-  <nav>
-    <div id="nav-left">
-      <img
-        id="menu-icon"
-        onclick="showMenu()"
-        src="/images/menu.png"
-        alt="="
-        draggable="false"
-      />
-      <img
-        id="jkb-logo"
-        src="/images/jkb_logo.png"
-        alt="jkb-logo"
-        draggable="false"
-      />
-      <div id="social">
-        <div id="whatsapp">
-          <a
-            href="https://api.whatsapp.com/send/?phone=919768455222&text=Hi&type=phone_number&app_absent=0"
-            target="_blank"
-            draggable="false"
-            ><img
-              class="social-icons"
-              src="/images/whatsapp.png"
-              draggable="false"
-          /></a>
-        </div>
-        <div id="phone">
-          <a href="tel:+919768455222" target="_blank" draggable="false"
-            ><img
-              class="social-icons"
-              src="/images/phone.png"
-              draggable="false"
-          /></a>
-        </div>
-        <div id="youtube">
-          <a
-            href="https://www.youtube.com/channel/UC0lmhygv8wJTQbVjF-6QUVg"
-            target="_blank"
-            draggable="false"
-            ><img
-              class="social-icons"
-              src="/images/youtube.png"
-              draggable="false"
-          /></a>
-        </div>
-        <div id="insta">
-          <a
-            href="https://www.instagram.com/jkb_education_group/"
-            target="_blank"
-            draggable="false"
-            ><img
-              class="social-icons"
-              src="/images/instagram.png"
-              draggable="false"
-          /></a>
-        </div>
-        <div id="linkdn">
-          <a
-            href="https://in.linkedin.com/company/jkb-education-group?trk=public_profile_topcard-current-company"
-            target="_blank"
-            draggable="false"
-            ><img
-              class="social-icons"
-              src="/images/linkedin.png"
-              draggable="false"
-          /></a>
-        </div>
-      </div>
-    </div>
-    <div id="overlay"></div>
-    <ul id="menu" class="hidemenu">
-      <img id="cross-icon" src="/images/cross.png" alt="X" draggable="false" />
-      <img
-        id="jkb-logo-menu"
-        src="/images/jkb_logo.png"
-        alt="jkb-logo"
-        draggable="false"
-      />
-      <li><a id="home" href="/" draggable="false">Home</a></li>
-      <li onclick="showDropdown()">
-        <a id="courses" href="javascript:void(0)" draggable="false"
-          >Courses&nbsp;<img src="/images/drop_down.png" draggable="false"
-        /></a>
-        <div id="dropdown" class="hidden">
-          <a href="/counselling-page" draggable="false"
-            >Engg. Admission Counselling</a
-          >
-          <a href="/courses/1st-year-programming" draggable="false"
-            >1st Year Programming</a
-          >
-          <a href="/courses/1st-year-engg-coaching" draggable="false"
-            >1st Year Engg. Coaching</a
-          >
-          <a href="/it-services" draggable="false">IT Services for Start-Up</a>
-          <a href="/courses/2nd-year-programming" draggable="false"
-            >2nd Year Programming</a
-          >
-          <a href="/courses/ms-in-us-and-europe" draggable="false"
-            >MS in US and Europe</a
-          >
-          <a href="/courses/3rd-year-programming" draggable="false"
-            >3rd Year Programming</a
-          >
-          <a href="/courses/project-and-placement" draggable="false"
-            >Project and Placement</a
-          >
-          <a href="/courses/youth-empowerment-hub" draggable="false"
-            >Youth Empowerment Hub</a
-          >
-          <a href="/courses/financial-litracy" draggable="false"
-            >Financial Litracy</a
-          >
-        </div>
-      </li>
-      <li>
-        <a id="counselling" href="/counselling-page" draggable="false"
-          >Counselling</a
-        >
-      </li>
-      <li>
-        <a id="it-services" href="javascript:void(0)" draggable="false"
-          >IT Services</a
-        >
-      </li>
-      <li>
-        <a id="about-us" href="/about-us" draggable="false">About Us</a>
-      </li>
-    </ul>
-  </nav>
+
+  {{> navbar }}
+
   <div id="it-container">
     <section id="top-section">
       <div id="video-container">
@@ -137,10 +10,7 @@
         </video>
       </div>
       <div>
-        <img
-          src="/images/tailored_software_icon.png"
-          alt="tailored_software_icon"
-        />
+        <img src="/images/tailored_software_icon.png" alt="tailored_software_icon" />
         <div>
           <div class="heading">We provide Hightly-tailored IT solutions</div>
           <div class="subtext">

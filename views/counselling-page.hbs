@@ -1,132 +1,6 @@
 <div id="container">
-  <nav>
-    <div id="nav-left">
-      <img
-        id="menu-icon"
-        onclick="showMenu()"
-        src="/images/menu.png"
-        alt="="
-        draggable="false"
-      />
-      <img
-        id="jkb-logo"
-        src="/images/jkb_logo.png"
-        alt="jkb-logo"
-        draggable="false"
-      />
-      <div id="social">
-        <div id="whatsapp">
-          <a
-            href="https://api.whatsapp.com/send/?phone=919768455222&text=Hi&type=phone_number&app_absent=0"
-            target="_blank"
-            draggable="false"
-            ><img
-              class="social-icons"
-              src="/images/whatsapp.png"
-              draggable="false"
-          /></a>
-        </div>
-        <div id="phone">
-          <a href="tel:+919768455222" target="_blank" draggable="false"
-            ><img
-              class="social-icons"
-              src="/images/phone.png"
-              draggable="false"
-          /></a>
-        </div>
-        <div id="youtube">
-          <a
-            href="https://www.youtube.com/channel/UC0lmhygv8wJTQbVjF-6QUVg"
-            target="_blank"
-            draggable="false"
-            ><img
-              class="social-icons"
-              src="/images/youtube.png"
-              draggable="false"
-          /></a>
-        </div>
-        <div id="insta">
-          <a
-            href="https://www.instagram.com/jkb_education_group/"
-            target="_blank"
-            draggable="false"
-            ><img
-              class="social-icons"
-              src="/images/instagram.png"
-              draggable="false"
-          /></a>
-        </div>
-        <div id="linkdn">
-          <a
-            href="https://in.linkedin.com/company/jkb-education-group?trk=public_profile_topcard-current-company"
-            target="_blank"
-            draggable="false"
-            ><img
-              class="social-icons"
-              src="/images/linkedin.png"
-              draggable="false"
-          /></a>
-        </div>
-      </div>
-    </div>
-    <div id="overlay"></div>
-    <ul id="menu" class="hidemenu">
-      <img id="cross-icon" src="/images/cross.png" alt="X" draggable="false" />
-      <img
-        id="jkb-logo-menu"
-        src="/images/jkb_logo.png"
-        alt="jkb-logo"
-        draggable="false"
-      />
-      <li><a id="home" href="/" draggable="false">Home</a></li>
-      <li onclick="showDropdown()">
-        <a id="courses" href="javascript:void(0)" draggable="false"
-          >Courses&nbsp;<img src="/images/drop_down.png" draggable="false"
-        /></a>
-        <div id="dropdown" class="hidden">
-          <a href="/counselling-page" draggable="false"
-            >Engg. Admission Counselling</a
-          >
-          <a href="/courses/1st-year-programming" draggable="false"
-            >1st Year Programming</a
-          >
-          <a href="/courses/1st-year-engg-coaching" draggable="false"
-            >1st Year Engg. Coaching</a
-          >
-          <a href="/it-services" draggable="false">IT Services for Start-Up</a>
-          <a href="/courses/2nd-year-programming" draggable="false"
-            >2nd Year Programming</a
-          >
-          <a href="/courses/ms-in-us-and-europe" draggable="false"
-            >MS in US and Europe</a
-          >
-          <a href="/courses/3rd-year-programming" draggable="false"
-            >3rd Year Programming</a
-          >
-          <a href="/courses/project-and-placement" draggable="false"
-            >Project and Placement</a
-          >
-          <a href="/courses/youth-empowerment-hub" draggable="false"
-            >Youth Empowerment Hub</a
-          >
-          <a href="/courses/financial-litracy" draggable="false"
-            >Financial Litracy</a
-          >
-        </div>
-      </li>
-      <li>
-        <a id="counselling" href="javascript:void(0)" draggable="false"
-          >Counselling</a
-        >
-      </li>
-      <li>
-        <a id="it-services" href="it-services" draggable="false">IT Services</a>
-      </li>
-      <li>
-        <a id="about-us" href="about-us" draggable="false">About Us</a>
-      </li>
-    </ul>
-  </nav>
+
+  {{> navbar }}
 
   <div id="first-wrapper">
     <div id="video-sec">
@@ -158,10 +32,8 @@
         </div>
         <div>
           <img src=".//images/clock.png" alt="clock" />
-          <span
-            >Fees / Distance / Travel Time / Hostel Admission to Placement
-            Journey</span
-          >
+          <span>Fees / Distance / Travel Time / Hostel Admission to Placement
+            Journey</span>
         </div>
         <div>
           <img src=".//images/msg.png" alt="msg" />
@@ -178,9 +50,7 @@
 
   <div id="middle-wrapper">
     <div>Not Sure which College?</div>
-    <a id="predict-btn" href="./predict-college" draggable="false"
-      >Predict Engg. College</a
-    >
+    <a id="predict-btn" href="./predict-college" draggable="false">Predict Engg. College</a>
   </div>
 
   <div id="second-wrapper">
@@ -241,39 +111,27 @@
     <h1>Testimonials</h1>
     <div id="videos">
       <div class="video-box">
-        <iframe
-          src="https://www.youtube.com/embed/G5g8Gfo8Qc8/?loop=1&rel=0&fs=0&modestbranding=1"
-        ></iframe>
+        <iframe src="https://www.youtube.com/embed/G5g8Gfo8Qc8/?loop=1&rel=0&fs=0&modestbranding=1"></iframe>
         <!-- <div>Chiranjiv Nagrajan</div> -->
       </div>
       <div class="video-box">
-        <iframe
-          src="https://www.youtube.com/embed/MbP4Nq-ngQU/?loop=1&rel=0&fs=0&modestbranding=1"
-        ></iframe>
+        <iframe src="https://www.youtube.com/embed/MbP4Nq-ngQU/?loop=1&rel=0&fs=0&modestbranding=1"></iframe>
         <!-- <div>Pranil Balshankar</div> -->
       </div>
       <div class="video-box">
-        <iframe
-          src="https://www.youtube.com/embed/YD0qA5g5Evo/?loop=1&rel=0&fs=0&modestbranding=1"
-        ></iframe>
+        <iframe src="https://www.youtube.com/embed/YD0qA5g5Evo/?loop=1&rel=0&fs=0&modestbranding=1"></iframe>
         <!-- <div>Shravan Chilka</div> -->
       </div>
       <div class="video-box">
-        <iframe
-          src="https://www.youtube.com/embed/4Gg0j29m1CY/?loop=1&rel=0&fs=0&modestbranding=1"
-        ></iframe>
+        <iframe src="https://www.youtube.com/embed/4Gg0j29m1CY/?loop=1&rel=0&fs=0&modestbranding=1"></iframe>
         <!-- <div>Darshana Nikam</div> -->
       </div>
       <div class="video-box">
-        <iframe
-          src="https://www.youtube.com/embed/_ee8q5YHW1c/?loop=1&rel=0&fs=0&modestbranding=1"
-        ></iframe>
+        <iframe src="https://www.youtube.com/embed/_ee8q5YHW1c/?loop=1&rel=0&fs=0&modestbranding=1"></iframe>
         <!-- <div>Harshal Bhoir</div> -->
       </div>
       <div class="video-box">
-        <iframe
-          src="https://www.youtube.com/embed/AjplxM1tgd4/?loop=1&rel=0&fs=0&modestbranding=1"
-        ></iframe>
+        <iframe src="https://www.youtube.com/embed/AjplxM1tgd4/?loop=1&rel=0&fs=0&modestbranding=1"></iframe>
         <!-- <div>Vishwas Paighan</div> -->
       </div>
     </div>
@@ -285,43 +143,23 @@
     <form action="" id="contact-form">
       <div>
         <label>Name</label><br />
-        <input
-          type="text"
-          placeholder="Click here to enter Name"
-          class="contact-input"
-        />
+        <input type="text" placeholder="Click here to enter Name" class="contact-input" />
       </div>
       <div>
         <label>Phone Number</label><br />
-        <input
-          type="text"
-          placeholder="Click here to enter Contact Number"
-          class="contact-input"
-        />
+        <input type="text" placeholder="Click here to enter Contact Number" class="contact-input" />
       </div>
       <div>
         <label>Email ID</label><br />
-        <input
-          type="email"
-          placeholder="Click here to enter Email"
-          class="contact-input"
-        />
+        <input type="email" placeholder="Click here to enter Email" class="contact-input" />
       </div>
       <div>
         <label>Address</label><br />
-        <input
-          type="text"
-          placeholder="Click here to enter Address"
-          class="contact-input"
-        />
+        <input type="text" placeholder="Click here to enter Address" class="contact-input" />
       </div>
       <div>
         <label>Purpose</label><br />
-        <input
-          type="text"
-          placeholder="Click here to enter Purpose"
-          class="contact-input"
-        />
+        <input type="text" placeholder="Click here to enter Purpose" class="contact-input" />
       </div>
       <div>
         <button>Submit Details</button>
