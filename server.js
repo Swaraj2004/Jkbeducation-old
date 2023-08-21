@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const handlerBar = require("express-handlebars");
 const mongoose = require("mongoose");
@@ -12,7 +13,7 @@ app.engine(".hbs", handlerBar.engine({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
 app.set("views", "./views");
 
-const dbURI = "";
+const dbURI = process.env.MONGODB_URI;
 mongoose
   .connect(dbURI)
   .then((res) => {
@@ -22,17 +23,17 @@ mongoose
     console.log(err);
   });
 
-// async function run() {
-//   const contact = await Contact.create({
-//     name: "Swaj",
-//     phone: 9999999999,
-//     email: "swaj@mail.com",
-//     address: "Panvel",
-//     purpose: "message",
-//   });
-//   console.log(contact);
-// }
-// run();
+async function run() {
+  const contact = await Contact.create({
+    name: "Swaj",
+    phone: 9999999999,
+    email: "swaj@mail.com",
+    address: "Panvel",
+    purpose: "message",
+  });
+  console.log(contact);
+}
+run();
 
 app.get("/", (req, res) => {
   res.render("home", {
