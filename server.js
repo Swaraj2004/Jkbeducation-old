@@ -1,6 +1,9 @@
 const express = require("express");
 const handlerBar = require("express-handlebars");
+const mongoose = require("mongoose");
 // const path = require("path");
+const Contact = require("./contact");
+
 const port = 3000;
 const app = express();
 app.use(express.static("public"));
@@ -8,6 +11,28 @@ app.use("/favicon.ico", express.static("images/favicon.ico"));
 app.engine(".hbs", handlerBar.engine({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
 app.set("views", "./views");
+
+const dbURI = "";
+mongoose
+  .connect(dbURI)
+  .then((res) => {
+    console.log("Connected to Database.");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+// async function run() {
+//   const contact = await Contact.create({
+//     name: "Swaj",
+//     phone: 9999999999,
+//     email: "swaj@mail.com",
+//     address: "Panvel",
+//     purpose: "message",
+//   });
+//   console.log(contact);
+// }
+// run();
 
 app.get("/", (req, res) => {
   res.render("home", {
@@ -118,5 +143,5 @@ app.get("/courses/:title", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("Server connected to port ", port);
+  console.log("Server connected to port", port);
 });
