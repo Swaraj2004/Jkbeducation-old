@@ -628,10 +628,20 @@ nav {
   cursor: pointer;
 }
 
-#contact-form > div:last-of-type {
+#contact-form > div:nth-of-type(6) {
   display: flex;
   justify-content: center;
   margin-bottom: 0;
+}
+
+#contact-form > div:last-of-type {
+  display: none;
+  justify-content: center;
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #e44e3b;
 }
 
 @media only screen and (min-width: 1200px) {

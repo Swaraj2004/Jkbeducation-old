@@ -185,30 +185,31 @@
   <div id="contact-popup">
     <span id="contact-head">Contact Us</span>
     <span id="cross">&times;</span>
-    <form action="" id="contact-form">
+    <form action="/contact" id="contact-form" method="POST">
       <div>
         <label>Name</label><br />
-        <input type="text" placeholder="Click here to enter Name" class="contact-input" />
+        <input type="text" placeholder="Click here to enter Name" name="name" />
       </div>
       <div>
         <label>Phone Number</label><br />
-        <input type="text" placeholder="Click here to enter Contact Number" class="contact-input" />
+        <input type="number" placeholder="Click here to enter Contact Number" name="phone" />
       </div>
       <div>
         <label>Email ID</label><br />
-        <input type="email" placeholder="Click here to enter Email" class="contact-input" />
+        <input type="email" placeholder="Click here to enter Email" name="email" />
       </div>
       <div>
         <label>Address</label><br />
-        <input type="text" placeholder="Click here to enter Address" class="contact-input" />
+        <input type="text" placeholder="Click here to enter Address" name="address" />
       </div>
       <div>
         <label>Purpose</label><br />
-        <input type="text" placeholder="Click here to enter Purpose" class="contact-input" />
+        <input type="text" placeholder="Click here to enter Purpose" name="purpose" />
       </div>
       <div>
-        <button>Submit Details</button>
+        <button type="submit" onclick="submitContact()">Submit Details</button>
       </div>
+      <div>Please fill the Form</div>
     </form>
   </div>
 </div>

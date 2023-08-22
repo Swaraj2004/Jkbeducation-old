@@ -1,14 +1,17 @@
 require("dotenv").config();
 const express = require("express");
 const handlerBar = require("express-handlebars");
+const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 // const path = require("path");
 const Contact = require("./contact");
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 app.use(express.static("public"));
 app.use("/favicon.ico", express.static("images/favicon.ico"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.engine(".hbs", handlerBar.engine({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
 app.set("views", "./views");
@@ -23,23 +26,38 @@ mongoose
     console.log(err);
   });
 
-async function run() {
-  const contact = await Contact.create({
-    name: "Swaj",
-    phone: 9999999999,
-    email: "swaj@mail.com",
-    address: "Panvel",
-    purpose: "message",
-  });
-  console.log(contact);
-}
-run();
+// async function run() {
+//   const contact = await Contact.create({
+//     name: "Swaj",
+//     phone: 9999999999,
+//     email: "swaj@mail.com",
+//     address: "Panvel",
+//     purpose: "message",
+//   });
+//   console.log(contact);
+// }
+// run();
 
 app.get("/", (req, res) => {
   res.render("home", {
     csspath: "/css/home.css",
     helpers: {},
   });
+});
+
+app.post("/contact", async (req, res) => {
+  const data = req.body;
+
+  const contact = await Contact.create({
+    name: data.name,
+    phone: data.phone,
+    email: data.email,
+    address: data.address,
+    purpose: data.purpose,
+  });
+  console.log(contact);
+
+  res.redirect("/");
 });
 
 app.get("/it-services", (req, res) => {
