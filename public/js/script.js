@@ -113,7 +113,7 @@ function submitContact() {
   //   body: JSON.stringify(contactObj),
   // }).then((response) => {
   //   console.log(response);
-  // }) ||
+  // })
   fetch("https://jkbeducation.onrender.com/contact", {
     method: "POST",
     headers: {

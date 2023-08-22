@@ -56,6 +56,9 @@ app.post("/contact", async (req, res) => {
     purpose: data.purpose,
   });
   console.log(contact);
+  res.send({
+    msg: "Form Submitted",
+  });
 
   res.redirect("/");
 });
