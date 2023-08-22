@@ -105,7 +105,16 @@ function submitContact() {
     purpose,
   };
   console.log(contactObj);
-  fetch("http://127.0.0.1:3000/contact", {
+  // fetch("http://127.0.0.1:3000/contact", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-type": "application/json",
+  //   },
+  //   body: JSON.stringify(contactObj),
+  // }).then((response) => {
+  //   console.log(response);
+  // }) ||
+  fetch("https://jkbeducation.onrender.com/contact", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -113,14 +122,5 @@ function submitContact() {
     body: JSON.stringify(contactObj),
   }).then((response) => {
     console.log(response);
-  }) ||
-    fetch("https://jkbeducation.onrender.com/contact", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(contactObj),
-    }).then((response) => {
-      console.log(response);
-    });
+  });
 }
