@@ -56,11 +56,11 @@ app.post("/contact", async (req, res) => {
     purpose: data.purpose,
   });
   console.log(contact);
-  res.send({
-    msg: "Form Submitted",
-  });
+  // res.send({
+  //   msg: "Form Submitted",
+  // });
 
-  res.redirect("/");
+  res.redirect(200, "/");
 });
 
 app.get("/it-services", (req, res) => {
