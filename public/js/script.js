@@ -104,9 +104,13 @@ function submitContact() {
         "Content-type": "application/json",
       },
       body: JSON.stringify(formDataObj),
-    }).then((response) => {
-      console.log(response);
-    });
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 }
 submitContact();
