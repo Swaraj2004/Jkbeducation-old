@@ -72,7 +72,7 @@ function showContact() {
 
 function submitContact() {
   const contactform = document.getElementById("contact-form");
-  contactform.onsubmit = async (e) => {
+  contactform.onsubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(contactform);
     const formDataObj = {};
@@ -98,7 +98,7 @@ function submitContact() {
     }
     const fetchUrl = window.location.origin + "/contact";
     // console.log(fetchUrl);
-    await fetch(fetchUrl, {
+    fetch(fetchUrl, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
