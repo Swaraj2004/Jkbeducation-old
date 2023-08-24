@@ -3,6 +3,7 @@ const express = require("express");
 const handlerBar = require("express-handlebars");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const cors = require("cors");
 // const path = require("path");
 const Contact = require("./contact");
 
@@ -10,6 +11,7 @@ const port = process.env.PORT || 3000;
 const app = express();
 app.use(express.static("public"));
 app.use("/favicon.ico", express.static("images/favicon.ico"));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.engine(".hbs", handlerBar.engine({ extname: ".hbs" }));
@@ -26,18 +28,6 @@ mongoose
     console.log(err);
   });
 
-// async function run() {
-//   const contact = await Contact.create({
-//     name: "Swaj",
-//     phone: 9999999999,
-//     email: "swaj@mail.com",
-//     address: "Panvel",
-//     purpose: "message",
-//   });
-//   console.log(contact);
-// }
-// run();
-
 app.get("/", (req, res) => {
   res.render("home", {
     csspath: "/css/home.css",
@@ -47,7 +37,6 @@ app.get("/", (req, res) => {
 
 app.post("/contact", async (req, res) => {
   const data = req.body;
-
   const contact = await Contact.create({
     name: data.name,
     phone: data.phone,
@@ -56,11 +45,6 @@ app.post("/contact", async (req, res) => {
     purpose: data.purpose,
   });
   console.log(contact);
-  // res.send({
-  //   msg: "Form Submitted",
-  // });
-
-  res.redirect(200, "/");
 });
 
 app.get("/it-services", (req, res) => {

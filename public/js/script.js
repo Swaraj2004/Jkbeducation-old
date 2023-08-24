@@ -1,5 +1,3 @@
-const { json } = require("body-parser");
-
 function showDropdown() {
   const dropdown = document.getElementById("dropdown");
   const arrow = document.querySelector("#courses > img");
@@ -73,54 +71,42 @@ function showContact() {
 }
 
 function submitContact() {
-  // const submitbtn = document.querySelector("#contact-form button");
   const contactform = document.getElementById("contact-form");
-
-  const name = document.querySelector('[name="name"]').value;
-  const phone = document.querySelector('[name="phone"]').value;
-  const email = document.querySelector('[name="email"]').value;
-  const address = document.querySelector('[name="address"]').value;
-  const purpose = document.querySelector('[name="purpose"]').value;
-  console.log(name);
-  if (
-    name === "" ||
-    phone === "" ||
-    email === "" ||
-    address === "" ||
-    purpose === ""
-  ) {
-    contactform.addEventListener("submit", (e) => {
-      e.preventDefault();
+  contactform.onsubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(contactform);
+    const formDataObj = {};
+    formData.forEach((value, key) => (formDataObj[key] = value));
+    // console.log(formDataObj);
+    const formStatus = document.querySelector(
+      "#contact-form > div:last-of-type"
+    );
+    const name = formDataObj.name;
+    const phone = formDataObj.phone.toString();
+    const email = formDataObj.email;
+    const address = formDataObj.address;
+    const purpose = formDataObj.purpose;
+    if (!name || !phone || !email || !address || !purpose) {
+      formStatus.style.color = "orangered";
+      formStatus.innerText = "Please Fill the Form Completely";
+      formStatus.style.display = "flex";
+      return;
+    } else {
+      formStatus.style.color = "lime";
+      formStatus.innerText = "Form Submitted";
+      formStatus.style.display = "flex";
+    }
+    const fetchUrl = window.location.origin + "/contact";
+    // console.log(fetchUrl);
+    await fetch(fetchUrl, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(formDataObj),
+    }).then((response) => {
+      console.log(response);
     });
-    document.querySelector("#contact-form > div:last-of-type").style.display =
-      "flex";
-    console.log("working");
-    return false;
-  }
-  const contactObj = {
-    name,
-    phone,
-    email,
-    address,
-    purpose,
   };
-  console.log(contactObj);
-  // fetch("http://127.0.0.1:3000/contact", {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-type": "application/json",
-  //   },
-  //   body: JSON.stringify(contactObj),
-  // }).then((response) => {
-  //   console.log(response);
-  // }) ||
-  fetch("https://jkbeducation.onrender.com/contact", {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json",
-    },
-    body: JSON.stringify(contactObj),
-  }).then((response) => {
-    console.log(response);
-  });
 }
+submitContact();
