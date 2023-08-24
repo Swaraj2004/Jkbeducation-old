@@ -88,7 +88,7 @@ function submitContact() {
     const purpose = formDataObj.purpose;
     if (!name || !phone || !email || !address || !purpose) {
       formStatus.style.color = "orangered";
-      formStatus.innerText = "Please Fill the Form Completely";
+      formStatus.innerText = "Please Fill the Form Properly";
       formStatus.style.display = "flex";
       return;
     } else {
