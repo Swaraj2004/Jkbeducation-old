@@ -19,7 +19,6 @@ router.post("/contact", async (req, res) => {
     purpose: data.purpose,
   });
   console.log(contact);
-  res.sendStatus(200);
 });
 
 router.get("/counselling-page", (req, res) => {
