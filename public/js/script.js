@@ -56,6 +56,25 @@ function hideMenu(e) {
   }
 }
 
+function incrementCount() {
+  const counters = document.querySelectorAll("[data-count]");
+  counters.forEach((counter) => {
+    const updateCounter = () => {
+      const count = +counter.getAttribute("data-count");
+      const c = +counter.innerText;
+      const increment = count / 500;
+      if (c < count) {
+        counter.innerText = `${Math.ceil(c + increment)}`;
+        setTimeout(updateCounter, 1);
+      } else {
+        counter.innerText = `${count}`;
+      }
+    };
+    updateCounter();
+  });
+}
+incrementCount();
+
 function showContact() {
   const contactPopup = document.getElementById("contact-popup");
   const cross = document.getElementById("cross");
