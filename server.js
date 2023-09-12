@@ -3,7 +3,7 @@ const handlerBar = require("express-handlebars");
 const mongoose = require("mongoose");
 const cors = require("cors");
 // const path = require("path");
-require("dotenv").config();
+// require("dotenv").config();
 const routes = require("./app/routes/routes");
 const port = process.env.PORT || 3000;
 const app = express();
