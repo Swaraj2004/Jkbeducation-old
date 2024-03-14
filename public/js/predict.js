@@ -39,7 +39,7 @@ predbtn.addEventListener("click", function () {
   console.log(predfor);
 
   let resultStr = "";
-  fetch("https://api.jkbeducation.com/api/v1/predict-colleges-by-score-local", {
+  fetch("https://api.jkbeducation.com/api/v1/predict-colleges-by-score", {
     method: "POST",
     body: JSON.stringify(predfor),
     headers: { "Content-type": "application/json; charset=UTF-8" },
