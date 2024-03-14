@@ -22,7 +22,7 @@ searchbtn.addEventListener("click", function () {
   };
   console.log(searchfor);
 
-  fetch("https://api.jkbeducation.com/api/v1/list-colleges-by-region-local", {
+  fetch("https://api.jkbeducation.com/api/v1/list-colleges-by-region", {
     method: "POST",
     body: JSON.stringify(searchfor),
     headers: { "Content-type": "application/json; charset=UTF-8" },
