@@ -4,11 +4,14 @@
 
   <div id="sec-container">
     <section id="sec-left">
-      <video controls poster="/images/jkb-thumbnail.png">
+      <div class=" flex justify-center">
+      <video controls autoplay poster="/images/jkb-thumbnail.png">
         <source src="https://jkbstaticservices2.s3.ap-south-1.amazonaws.com/videos/Engg.+Admission+Counseling.mp4"
           type="video/mp4" />
       </video>
-      <div id="text-btn">
+      </div>
+
+      {{!-- <div id="text-btn">
         <span id="admit-title">Worried About Admission ?</span>
         <a id="admission-btn" class="home-btns" href="/counselling-page" draggable="false">Engg. Admission Process
           2023</a>
@@ -17,12 +20,132 @@
         <a onclick="showContact()" id="contact-us-btn" class="home-btns" href="javascript:void(0)"
           draggable="false">Contact Us</a>
         <a id="predict-btn" class="home-btns" href="/predict-college" draggable="false">Predict Engg. College</a>
+      </div> --}}
+
+
+    <div class="flex flex-col w-full  ">
+    <div class="sm:text-4xl text-3xl font-semibold pt-2">
+      Worried About Admission ?
+    </div>
+    <div class="p-2"></div>
+    <div class="flex flex-col justify-between w-full items-center flex-1 ">
+      <div class="flex flex-row justify-between w-full">
+        <div class="w-full">
+          <a href="/counselling-page"  draggable="false" >
+          <button class="rounded-lg hover:bg-[#ca9462] w-full text-xl font-semibold bg-[#fa8b26] px-4 py-2 mr-2">Engg. Admission Process 2024 </button>
+          </a> 
+        </div>
+        <div class="w-full ml-4" >
+          <a href="https://student.jkbeducation.com/login"  draggable="false" >
+            <button class="rounded-lg sm:text-xl text-2xl w-full hover:bg-[#ca9462] font-semibold bg-[#fa8b26] px-4 h-full py-2">Login</button>
+          </a>
+        </div>
       </div>
-      <div id="about">
-        <h3 style="margin-top: 0">Who we are?</h3>
+      <div class="p-2"></div>
+      <div class="flex flex-row justify-between w-full ">
+        <div class="w-full mr-4"><a href="/predict-college" draggable="false"><button class="w-full hover:bg-[#ca9462] rounded-lg text-xl font-semibold bg-[#fa8b26] px-6 py-2 mr-2">Predict  Engg. Colleges 2024</button></a> </div>
+        <div class="w-full"><a href="https://student.jkbeducation.com/signup"><button class="w-full hover:bg-[#ca9462] h-full rounded-lg text-2xl sm:text-xl font-semibold bg-[#fa8b26] px-4 py-2">Contact Us</button></a></div>
+      </div>
+    </div>
+     <div class="p-2"></div>
+    </div>
+
+    <div class="w-full">
+      <div class="flex flex-col justify-center items-center">
+      <div class="text-2xl font-semibold">Toppers List</div>
+      <div id="default-carousel" class="relative w-full" data-carousel="slide">
+          <div class="relative h-[400px] overflow-hidden rounded-lg ">
+              <!-- Student 1 -->
+              <div class="flex flex-col justify-around items-center hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="../public/images/carouselHome/sample111.jpg" class="w-[250px] h-[280px] overflow-hidden">
+                  <div class="mb-8 ">
+                      <div>
+                        <div>Sample Nam</div>
+                        <div>C.G.P.I: 10 , SEM: 1</div>
+                        <div>College</div>
+                      </div>                     
+                    </div>
+              </div>
+              <!-- Student 2 -->
+              <div class="flex flex-col justify-around items-center hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="../public/images/carouselHome/sample11.jpg" class="w-[250px] h-[280px]">
+                  <div class="mb-8 ">
+                      <div>
+                        <div>Sample Name</div>
+                        <div>C.G.P.I: 10 , SEM: 1</div>
+                        <div>College</div>
+                      </div>                     
+                    </div>
+              </div>
+              <!-- Student 3 -->
+              <div class="flex flex-col justify-around items-center hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="../public/images/carouselHome/sample11.jpg" class="w-[250px] h-[280px]">
+                  <div class="mb-8 ">
+                      <div>
+                        <div>Sample Name</div>
+                        <div>C.G.P.I: 10 , SEM: 1</div>
+                        <div>College</div>
+                      </div>                     
+                    </div>
+              </div>
+              <!-- Student 4 -->
+              <div class="flex flex-col justify-around items-center hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="../public/images/carouselHome/sample11.jpg" class="w-[250px] h-[280px]">
+                  <div class="mb-8 ">
+                      <div>
+                        <div>Sample Name</div>
+                        <div>C.G.P.I: 10 , SEM: 1</div>
+                        <div>College</div>
+                      </div>                     
+                    </div>
+              </div>
+              <!-- Student 5 -->
+              <div class="flex flex-col justify-around items-center hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="../public/images/carouselHome/sample11.jpg" class="w-[250px] h-[280px]">
+                  <div class="mb-8 ">
+                      <div>
+                        <div>Sample Name</div>
+                        <div>C.G.P.I: 10 , SEM: 1</div>
+                        <div>College</div>
+                      </div>                     
+                    </div>
+              </div>
+          </div>
+          <!-- Slider indicators -->
+          <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+          </div>
+          <!-- Slider controls -->
+          <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                  </svg>
+                  <span class="sr-only">Previous</span>
+              </span>
+          </button>
+          <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                  </svg>
+                  <span class="sr-only">Next</span>
+              </span>
+          </button>
+      </div>
+      </div>
+
+    </div>
+
+      {{!-- <div id="about">
+        <h3 style="margin-top: 0">Top</h3>
         <p>
           JKB Education, led by Mr. Vinayak Shete, is a prestigious engineering
-          institute in India with a vision to empower and uplift the country's
+          institute inv India with a vision to empower and uplift the country's
           youth in engineering under the guidance of Prof. N H Dubey (Author of
           Engg. Mechanics, Engg. Drawing / Graphics, published by TATA McGraw
           Hill publications).
@@ -41,7 +164,7 @@
           environment and creates a pleasant atmosphere that enhances the
           overall growth of our students.
         </p>
-      </div>
+      </div> --}}
     </section>
     <h1>Our Courses</h1>
     <section id="sec-right">
@@ -108,46 +231,33 @@
     </section>
   </div>
   <div id="second-wrapper">
-    <section id="wrap-left">
-      <div class="achievements">
+    <div class="flex flex-row w-full space-x-4 sm:space-x-6 justify-around sm:mr-4 mb-4">
+      <div class="achievements   flex-1  sm:w-full ">
         <img src="/images/counselling.png" />
         <div data-count="45000">0</div>
         <p>Counselling<br />Students</p>
       </div>
-      <div class="achievements">
+      <div class="achievements  flex-1  sm:w-full">
         <img src="/images/students.png" />
         <div data-count="10000">0</div>
         <p>Students<br />Trained</p>
       </div>
-      <div class="achievements">
+      <div class="achievements  flex-1  sm:w-full">
         <img src="/images/startup.png" />
         <div data-count="250">0</div>
         <p>Start-Up<br />Projects<br />Completed</p>
       </div>
-    </section>
+      </div>
     <section id="wrap-right">
       <h3>4 Years of Mentorship Throughout Your Engineering Journey</h3>
-      <p>
-        Let us embark on a transformative and fulfilling 4-year engineering
-        journey with JKB Education & Vinayak sir, where you will be entitled for
-        the following perks
-      </p>
-      <ul>
-        <li>expert coaching in 1st year of engineering</li>
-        <li>preparation of placements in 2nd year</li>
-        <li>
-          specialised industrial training through industrial courses in 3rd year
-        </li>
-        <li>
-          experience in impactful projects & remarkable placement in final year
-        </li>
-      </ul>
-      <p>
-        You can also opt for MS abroad opportunities, pathways to prestigious
-        careers or entrepreneurship to build your own startup, or premium
-        government jobs. Unleash your potential and shape a future that knows no
-        bounds with JKB.
-      </p>
+      <div class="space-y-2">
+        <p><strong>Master Your Foundation:</strong> Get expert coaching in your 1st year to build a strong foundation for engineering success</p>
+        <p><strong>Placement Ready:</strong> Focus on achieving your dream placement with dedicated guidance starting in year 2</p>
+        <p><strong>Industry Prepared:</strong> Gain practical experience through specialized industrial trainer in year 3</p>
+        <p><strong>Stand Out:</strong> Shine in your final year with impactful projects and secure a remarkable placement</p>
+        <p><strong>Beyond Engineering:</strong> Explore opportunities for MS abroad, prestigious careers, or entrepreneurial ventures</p>
+      </div>
+
     </section>
   </div>
   <div id="testimonials">

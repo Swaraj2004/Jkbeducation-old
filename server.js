@@ -17,15 +17,15 @@ app.engine(".hbs", handlerBar.engine({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
 app.set("views", "./views");
 
-const dbURI = process.env.MONGODB_URI;
-mongoose
-  .connect(dbURI)
-  .then((res) => {
-    console.log("Connected to Database.");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// const dbURI = process.env.MONGODB_URI;
+// mongoose
+//   .connect(dbURI)
+//   .then((res) => {
+//     console.log("Connected to Database.");
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
 app.use("/", routes);
 

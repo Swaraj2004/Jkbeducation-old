@@ -112,6 +112,26 @@ section {
   display: block;
 }
 
+#button-link {
+  background-color: transparent;
+  border-radius: 0.2rem 0.6rem;
+  list-style-type: disc;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+#button-link:hover {
+  color: white;
+  background-color: var(--accent-clr); 
+}
+
 html {
   scroll-behavior: smooth;
   background-color: var(--bg-main) !important;

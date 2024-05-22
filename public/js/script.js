@@ -100,7 +100,7 @@ function showContact() {
 }
 
 function submitContact() {
-  const contactform = document.getElementById("contact-form");
+  // const contactform = document.getElementById("contact-form");
   contactform.onsubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(contactform);
@@ -126,9 +126,11 @@ function submitContact() {
       formStatus.style.display = "flex";
     }
     const fetchUrl = window.location.origin + "/contact";
-    // console.log(fetchUrl);
+    // const fetchUrl = "https://student.jkbeducation.com/signup";
+
+    console.log(fetchUrl);
     fetch(fetchUrl, {
-      method: "POST",
+      method: "GET",
       headers: {
         "Content-type": "application/json",
       },

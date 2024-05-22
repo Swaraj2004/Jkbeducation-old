@@ -224,6 +224,26 @@ nav {
   box-shadow: 0 0.25rem 0.4rem 0 rgba(0, 0, 0, 0.2);
 }
 
+#button-link {
+  background-color: transparent;
+  border-radius: 0.2rem 0.6rem;
+  list-style-type: disc;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+#button-link:hover {
+  color: white;
+  background-color: var(--accent-clr); 
+}
+
 #nav-left {
   display: flex;
   gap: 2.5rem;
@@ -368,12 +388,14 @@ nav {
   flex-direction: column;
   padding: 0 2.5%;
   margin-top: 2.5rem;
+  width: 100%;
 }
 
 #predict-div div {
   display: flex;
   justify-content: center;
   text-align: center;
+  justify-items: center;
 }
 
 #predict-div-1 {
@@ -402,10 +424,10 @@ nav {
   line-height: 1.5rem;
   font-weight: bolder;
   border-radius: 1rem;
-  height: 2.5rem;
+  height: auto;
   border: 0;
   margin: 0.4rem 0;
-  padding: 0.6rem 0;
+  padding: 10px;
   width: 26rem;
   cursor: pointer;
 }

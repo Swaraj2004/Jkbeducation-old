@@ -11,22 +11,37 @@
       </video>
       <!-- </div> -->
     </div>
-    <div id="heading-sec">Engg. Admission Counselling</div>
+    <div class="text-4xl font-medium flex jutify-center p-2 text-center">
+     <div> Engineering Admission Process 2024</div>
+    </div>
+
     <div id="info-sec">
-      <ul>
-        <li><b>350+</b> Engineering Colleges in Entire Maharastra</li>
-        <li><b>65+</b> Colleges Ranking in Mumbai</li>
-        <li><b>120+</b> Colleges in Pune University</li>
-        <li>
-          <b>25+</b> Engineering Branches (CSE vs IT vs AI ML vs AI DS vs IoT)
-        </li>
-        <li><b>Grade & Placement</b> of College (Intercollegiate Ranking)</li>
-        <li>Teaching Staff, Campus, Location for daily Travel & Hostel</li>
-        <li>CAP Rounds, Cut-off, OPTION form & All Documents</li>
-        <li>ARC, SC & FC Centers</li>
-        <li>1st Year Engineering & 4 Years of Journey</li>
+
+      <ul >
+  <div class="text-2xl font-medium flex jutify center p-2 text-center sm:hidden">
+    Engineering Admission Counseling for
+    Mumbai , Pune & all university of Maharashtra
+  </div>
+    <div class="flex jutify center p-2 text-center flex-col mb-6 mt-2 sm:hidden" >
+    <div class="py-4 text-3xl text-[#fa8b26] font-normal">Not Sure which College?</div>
+    <div ><a href="./predict-college" draggable="false">
+    <button class=" px-6 py-2 bg-[#fa8b26] text-2xl rounded-lg font-semibold" >Predict Engg. College</button></a></div>
+  </div>
+      <div class="flex flex-col justify-center items-start space-y-4 text-start pb-2 text-base sm:px-0 px-4 font-normal sm:font-semibold sm:space-y-4">
+
+      <div>350+ Engineering Colleges in Entire Maharashtra</div>
+      <div>65+ Colleges RANKING in Mumbai University</div>
+      <div>120+ Colleges RANKING in Pune University</div>
+      <div class="">25+ Branches (CSE vs IT vs AI ML vs AI DS vs IoT)</div>
+      <div>Grade & Placement Location & Hostel</div>
+      <div>CAP Rounds, Cut-off, OPTION Form & All Documents</div>
+      <div>ARC, SC Center, E - Scrutiny</div>
+      <div>1st Year Engineering & 4 Years of Journey</div>
+
+      </div>
+
       </ul>
-      <div id="img-text-div">
+      <div id="img-text-div" >
         <div>
           <img src=".//images/calender.png" alt="calender" />
           <span>College Ranking Seminar / Webinar</span>
@@ -42,36 +57,41 @@
         </div>
       </div>
     </div>
-    <div id="enroll-sec">
-      <button id="contact-us-btn" onclick="showContact()" type="button">
+    <div class="" id="enroll-sec">
+      <a class=''href="https://student.jkbeducation.com/signup">
+              <button class="py-5 px-12 sm:px-10 sm:py-3" id="contact-us-btn" 
+      {{!-- onclick="showContact()" --}}
+       type="button">
         Enroll Now
       </button>
+
+      </a>
+
     </div>
   </div>
+  
 
-  <div id="middle-wrapper">
-    <div>Not Sure which College?</div>
-    <a id="predict-btn" href="./predict-college" draggable="false">Predict Engg. College</a>
-  </div>
 
-  <div id="second-wrapper">
-    <section id="wrap-left">
-      <div class="achievements">
+  <div class="w-full flex flex-col sm:flex-row mt-4">
+
+      <div class="flex flex-row w-full space-x-4  sm:space-x-6 justify-around sm:mr-4 mb-4">
+      <div class="achievements   flex-1  sm:w-full ">
         <img src="/images/counselling.png" />
         <div data-count="45000">0</div>
         <p>Counselling<br />Students</p>
       </div>
-      <div class="achievements">
+      <div class="achievements  flex-1  sm:w-full">
         <img src="/images/students.png" />
         <div data-count="10000">0</div>
         <p>Students<br />Trained</p>
       </div>
-      <div class="achievements">
+      <div class="achievements  flex-1  sm:w-full">
         <img src="/images/startup.png" />
         <div data-count="250">0</div>
         <p>Start-Up<br />Projects<br />Completed</p>
       </div>
-    </section>
+      </div>
+      
     <section id="wrap-right">
       <ul>
         <li>
@@ -105,8 +125,10 @@
           </p>
         </li>
       </ul>
-    </section>
-  </div>
+
+</div>
+
+
 
   <div id="testimonials">
     <h1>Testimonials</h1>
