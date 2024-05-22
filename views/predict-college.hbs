@@ -3,7 +3,7 @@
   {{> navbar }}
 
   <div id="video-div">
-    <video controls poster="/images/jkb-thumbnail.png">
+    <video controls autoplay poster="/images/jkb-thumbnail.png">
       <source src="https://jkbstaticservices2.s3.ap-south-1.amazonaws.com/videos/Engg.+Admission+Counseling.mp4"
         type="video/mp4" />
     </video>
@@ -15,16 +15,53 @@
     <div id="predict-div-1">Not sure which college you will get admission?</div>
     <div id="predict-div-2">Predict Your Engginering College</div>
     <div id="predict-div-3">
-      <button class="" id="predict-college-btn">
+      <button id="predict-college-btn" class="hover:bg-[#ca9462]">
         Predict Your Engg College By JEE/CET Score
       </button>
-      <button id="list-of-college-btn">
+      <button class="hover:bg-[#ca9462]"
+             id="list-of-college-btn"
+      >
         List of Engg Colleges in Your District
       </button>
     </div>
   </div>
 
-  <div class="predict-clg-popup">
+<div class="predict-clg-popup">
+    <div class="popup-top">
+    <div class="popup-head text-2xl text-white font-bold">
+       Unlock <span class="text-[#fa8b26]">Your Future Potential!</span>
+    </div>
+
+    <div id="cross1" class="cross-btn">&times;</div>
+
+    <div class=" my-4 space-y-4">
+        <p>Ready to discover the perfect college match for your ambitions?</p>
+        <div class="flex flex-row justify-between w-full items-center text-center ">
+          <div class="flex-flex-row space-y-1 text-lg font-medium w-full mr-4">
+            <div class="text-[#fa8b26] ">
+              New Student ?
+            </div>
+            <div>
+             <a href="https://student.jkbeducation.com/login"> <button class="px-6 py-2 bg-[#fa8b26] w-full rounded-lg hover:bg-[#ca9462]">Sign Up</button></a>
+            </div>
+          </div>
+          <div class="flex-flex-row space-y-1 text-lg font-medium w-full ">
+            <div class="text-[#fa8b26] ">
+              Already Student ?
+            </div>
+            <div>
+             <a href="https://student.jkbeducation.com/login"> 
+              <button class="px-6 py-2 bg-[#fa8b26] rounded-lg w-full hover:bg-[#ca9462]">Log In</button></a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+{{!-- <div class="predict-clg-popup">
+
     <div class="popup-top">
       <div id="predict-heading" class="popup-head">
         Predict your Engg College By <span>JEE/CET</span> Score:
@@ -137,7 +174,7 @@
         <button id="predict-btn" type="button">Predict College</button>
       </div>
     </form>
-  </div>
+  </div> --}}
 
   <!-- list of colleges by score -->
   <div class="shortlist-clg">
@@ -162,6 +199,7 @@
         <li class="score">Score</li>
       </ul>
     </div>
+
   </div>
 
   <!-- <div class="submission-form">
@@ -170,7 +208,10 @@
       </div> -->
 
   <!-- College List Div -->
-  <div class="college-list-popup">
+
+<div class="college-list-popup">
+
+
     <div class="popup-top">
       <div id="college-list-div-heading" class="popup-head">
         List of Engg College in your District with Fees
@@ -239,7 +280,8 @@
         <button id="search-clg-btn" type="button">Search College</button>
       </div>
     </form>
-  </div>
+
+</div>
 
   <!-- list of colleges by district -->
   <div class="shortlist-clg-new">
@@ -264,23 +306,23 @@
   </div>
 
   <div id="second-wrapper">
-    <section id="wrap-left">
-      <div class="achievements">
+      <div class="flex flex-row w-full space-x-4  sm:space-x-6 justify-around sm:mr-4 mb-4">
+      <div class="achievements   flex-1  sm:w-full ">
         <img src="/images/counselling.png" />
-        <div>45,000+</div>
+        <div data-count="45000">0</div>
         <p>Counselling<br />Students</p>
       </div>
-      <div class="achievements">
+      <div class="achievements  flex-1  sm:w-full">
         <img src="/images/students.png" />
-        <div>10,000+</div>
+        <div data-count="10000">0</div>
         <p>Students<br />Trained</p>
       </div>
-      <div class="achievements">
+      <div class="achievements  flex-1  sm:w-full">
         <img src="/images/startup.png" />
-        <div>250+</div>
+        <div data-count="250">0</div>
         <p>Start-Up<br />Projects<br />Completed</p>
       </div>
-    </section>
+      </div>
     <section id="wrap-right">
       <ul>
         <li>

@@ -43,7 +43,7 @@ router.get("/courses/:title", (req, res) => {
         helpers: {
           heading: "1st Year Engineering Coaching",
           vedio:
-            "https://jkbstaticservices2.s3.ap-south-1.amazonaws.com/videos/1st+Year+Programming.mp4",
+            "https://jkbstaticservices2.s3.ap-south-1.amazonaws.com/videos/Engg.+Admission+Counseling.mp4",
         },
       });
       break;
@@ -52,6 +52,8 @@ router.get("/courses/:title", (req, res) => {
         csspath: "/css/courses.css",
         helpers: {
           heading: "1st Year Engineering Programming",
+          vedio:
+            "https://jkbstaticservices2.s3.ap-south-1.amazonaws.com/videos/1st+Year+Programming.mp4",
         },
       });
       break;
@@ -60,6 +62,8 @@ router.get("/courses/:title", (req, res) => {
         csspath: "/css/courses.css",
         helpers: {
           heading: "2nd Year Engineering Programming",
+          vedio:
+            "https://jkbstaticservices2.s3.ap-south-1.amazonaws.com/videos/2nd+year+programming.mp4",
         },
       });
       break;
@@ -68,6 +72,8 @@ router.get("/courses/:title", (req, res) => {
         csspath: "/css/courses.css",
         helpers: {
           heading: "MS in US and Europe",
+          vedio:
+            "https://jkbstaticservices2.s3.ap-south-1.amazonaws.com/videos/MS+in+europe.mp4",
         },
       });
       break;
@@ -76,6 +82,8 @@ router.get("/courses/:title", (req, res) => {
         csspath: "/css/courses.css",
         helpers: {
           heading: "3rd Year Engineering Programming",
+          vedio:
+            "https://jkbstaticservices2.s3.ap-south-1.amazonaws.com/videos/3rd+Year+Programming.mp4",
         },
       });
       break;
@@ -84,6 +92,8 @@ router.get("/courses/:title", (req, res) => {
         csspath: "/css/courses.css",
         helpers: {
           heading: "Projects & Placements",
+          vedio:
+            "https://jkbstaticservices2.s3.ap-south-1.amazonaws.com/videos/Final+Year+Projects+and+Placements.mp4",
         },
       });
       break;
@@ -92,6 +102,8 @@ router.get("/courses/:title", (req, res) => {
         csspath: "/css/courses.css",
         helpers: {
           heading: "Youth Empowerment Hub",
+          vedio:
+            "https://jkbstaticservices2.s3.ap-south-1.amazonaws.com/videos/Youth+Empowerment.mp4",
         },
       });
       break;
@@ -100,6 +112,8 @@ router.get("/courses/:title", (req, res) => {
         csspath: "/css/courses.css",
         helpers: {
           heading: "Financial Literacy",
+          vedio:
+            "https://jkbstaticservices2.s3.ap-south-1.amazonaws.com/videos/Financial+Literacy.mp4",
         },
       });
       break;
