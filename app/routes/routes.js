@@ -42,6 +42,8 @@ router.get("/courses/:title", (req, res) => {
         csspath: "/css/courses.css",
         helpers: {
           heading: "1st Year Engineering Coaching",
+          vedio:
+            "https://jkbstaticservices2.s3.ap-south-1.amazonaws.com/videos/1st+Year+Programming.mp4",
         },
       });
       break;
