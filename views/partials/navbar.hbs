@@ -1,5 +1,5 @@
 <nav class="p-6 py-8">
-    <div id="nav-left" >
+    <div id="nav-left">
         <img id="menu-icon" onclick="showMenu()" src="/images/menu.png" alt="=" draggable="false" />
         <img id="jkb-logo" src="/images/jkb_logo.png" alt="jkb-logo" draggable="false" />
         <div id="social">
@@ -31,17 +31,17 @@
     <ul id="menu" class="hidemenu">
         <img id="cross-icon" src="/images/cross.png" alt="X" draggable="false" />
         <img id="jkb-logo-menu" src="/images/jkb_logo.png" alt="jkb-logo" draggable="false" />
-       
+
         <li><a id="home" href="/" draggable="false">Home</a></li>
         <li onclick="showDropdown()">
-           
-            <a  class="flex flex-row font-bold w-full h-full" id="courses" href="javascript:void(0)" draggable="false">Courses&nbsp
-                <img class=' h-full 'src="/images/drop_down.png"
-                    draggable="false" />
-                    </a>
-            
 
-            <div id="dropdown" class="hidden">
+            <a class="flex flex-row font-bold w-full h-full" id="courses" href="javascript:void(0)"
+                draggable="false">Courses&nbsp
+                <img class="h-3 mt-3 xl:mt-2.5 xl:h-2" src="/images/drop_down.png" draggable="false" />
+            </a>
+
+
+            <div id="dropdown" class="hidden xl:translate-y-2.5">
                 <a href="/counselling-page" draggable="false">Engg. Admission Counselling</a>
                 <a href="/courses/1st-year-programming" draggable="false">1st Year Programming</a>
                 <a href="/courses/1st-year-engg-coaching" draggable="false">1st Year Engg. Coaching</a>
@@ -63,7 +63,9 @@
         <li>
             <a id="about-us" href="/about-us" draggable="false">About Us</a>
         </li>
-            <li> <a href="https://student.jkbeducation.com/login">Login</a></li>
+        <li class="xl:bg-[#fa8b26] rounded-tr-lg rounded-bl-lg rounded-tl-sm rounded-br-sm xl:py-1.5 xl:px-3"> <a
+                href="https://student.jkbeducation.com/login">Login</a>
+        </li>
 
     </ul>
 </nav>
