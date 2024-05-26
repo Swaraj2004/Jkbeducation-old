@@ -768,7 +768,7 @@ nav {
 /* Info */
 #second-wrapper {
   min-height: 15rem;
-  margin: 2rem 2.5%;
+  margin: 1.5rem 2.5%;
   display: grid;
   gap: 2.5rem;
   grid-template-columns: 55% 1fr;
@@ -1052,7 +1052,7 @@ nav {
     /* Info */
     #second-wrapper {
       grid-template-columns: 1fr;
-      margin: 3rem 2.5%;
+      margin: 2rem 2.5%;
     }
 
     #wrap-left {
