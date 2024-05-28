@@ -308,7 +308,7 @@ nav {
 
 #button-link:hover {
   color: white;
-  background-color: var(--accent-clr); 
+  background-color: var(--accent-clr);
 }
 
 .hidden {
@@ -690,6 +690,10 @@ nav {
   color: orangered;
 }
 
+.z-index {
+  z-index: 1 !important;
+}
+
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 14px;
@@ -768,7 +772,7 @@ nav {
       inset: 0;
       position: fixed;
       display: none;
-      z-index: 3;
+      z-index: 500;
       background-color: rgba(0, 0, 0, 0.6);
     }
 
@@ -777,7 +781,7 @@ nav {
       position: fixed;
       inset: 0 60% 0 0;
       display: block;
-      z-index: 5;
+      z-index: 1000;
       flex-direction: column;
       overflow-y: auto;
       -ms-overflow-style: none; /* for Internet Explorer, Edge */
