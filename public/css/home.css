@@ -7,6 +7,20 @@
   --font-clr-light: #ffffff;
   --scroll-clr: #8d9599;
 }
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-points {
+  animation: slideInFromRight 1s ease-out forwards;
+}
 
 html,
 body,
@@ -848,7 +862,7 @@ nav {
     }
 
     #dropdown > a:first-of-type {
-      padding-top: 2rem;
+      padding-top: 1.5rem;
     }
 
     #dropdown > a:last-of-type {
