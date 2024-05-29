@@ -1,12 +1,12 @@
-function preloader() {
-  const loader = document.getElementById("preloader");
-  document.body.style.overflow = "hidden";
-  window.addEventListener("load", () => {
-    loader.style.display = "none";
-    document.body.style.overflow = "unset";
-  });
-}
-preloader();
+// function preloader() {
+//   const loader = document.getElementById("preloader");
+//   document.body.style.overflow = "hidden";
+//   window.addEventListener("load", () => {
+//     loader.style.display = "none";
+//     document.body.style.overflow = "unset";
+//   });
+// }
+// preloader();
 
 function showDropdown() {
   const dropdown = document.getElementById("dropdown");

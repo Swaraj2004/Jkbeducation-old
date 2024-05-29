@@ -202,14 +202,14 @@ input[type="number"] {
   margin: 0 auto;
 }
 
-#preloader {
+/* #preloader {
   background: var(--bg-main) url(../images/loader.svg) no-repeat center center;
   background-size: 70px;
   height: 100dvh;
   width: 100%;
   position: fixed;
   z-index: 2;
-}
+} */
 
 nav {
   position: fixed;
@@ -239,7 +239,7 @@ nav {
 
 #button-link:hover {
   color: white;
-  background-color: var(--accent-clr); 
+  background-color: var(--accent-clr);
 }
 #nav-left {
   display: flex;
@@ -473,7 +473,7 @@ nav {
 }
 
 #second-wrapper {
-  margin: 2rem 2.5%;
+  margin: 1.5rem 2.5%;
   display: grid;
   gap: 2.5rem;
   grid-template-columns: 55% 1fr;
@@ -846,7 +846,7 @@ nav {
     }
 
     #dropdown > a:first-of-type {
-      padding-top: 2rem;
+      padding-top: 1.5rem;
     }
 
     #dropdown > a:last-of-type {
@@ -884,7 +884,6 @@ nav {
     }
 
     #enroll-sec {
-     
       justify-content: center;
       grid-row: 3/4;
       background-color: var(--bg-main);
@@ -937,7 +936,7 @@ nav {
     #second-wrapper {
       width: 100%;
       grid-template-columns: 1fr;
-      margin: 3rem 2.5%;
+      margin: 2rem 2.5%;
     }
 
     .achievements {

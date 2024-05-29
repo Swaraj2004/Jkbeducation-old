@@ -9,12 +9,12 @@
 }
 @keyframes slideInFromRight {
   0% {
-      transform: translateX(100%);
-      opacity: 0;
+    transform: translateX(100%);
+    opacity: 0;
   }
   100% {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -216,14 +216,14 @@ input[type="number"] {
   margin: 0 auto;
 }
 
-#preloader {
+/* #preloader {
   background: var(--bg-main) url(../images/loader.svg) no-repeat center center;
   background-size: 70px;
   height: 100dvh;
   width: 100%;
   position: fixed;
   z-index: 2;
-}
+} */
 
 nav {
   position: fixed;
@@ -862,7 +862,7 @@ nav {
     }
 
     #dropdown > a:first-of-type {
-      padding-top: 2rem;
+      padding-top: 1.5rem;
     }
 
     #dropdown > a:last-of-type {

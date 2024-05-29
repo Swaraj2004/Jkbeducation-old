@@ -3,7 +3,7 @@
   {{> navbar }}
 
   <div id="video-div">
-    <video controls autoplay poster="/images/jkb-thumbnail.png">
+    <video controls poster="/images/jkb-thumbnail.png" controlsList="nodownload">
       <source src="https://jkbstaticservices2.s3.ap-south-1.amazonaws.com/videos/Engg.+Admission+Counseling.mp4"
         type="video/mp4" />
     </video>
@@ -18,23 +18,21 @@
       <button id="predict-college-btn" class="hover:bg-[#ca9462]">
         Predict Your Engg College By JEE/CET Score
       </button>
-      <button class="hover:bg-[#ca9462]"
-             id="list-of-college-btn"
-      >
+      <button class="hover:bg-[#ca9462]" id="list-of-college-btn">
         List of Engg Colleges in Your District
       </button>
     </div>
   </div>
 
-<div class="predict-clg-popup">
+  <div class="predict-clg-popup">
     <div class="popup-top">
-    <div class="popup-head text-2xl text-white font-bold">
-       Unlock <span class="text-[#fa8b26]">Your Future Potential!</span>
-    </div>
+      <div class="popup-head text-2xl text-white font-bold">
+        Unlock <span class="text-[#fa8b26]">Your Future Potential!</span>
+      </div>
 
-    <div id="cross1" class="cross-btn">&times;</div>
+      <div id="cross1" class="cross-btn">&times;</div>
 
-    <div class=" my-4 space-y-4">
+      <div class=" my-4 space-y-4">
         <p>Ready to discover the perfect college match for your ambitions?</p>
         <div class="flex flex-row justify-between w-full items-center text-center ">
           <div class="flex-flex-row space-y-1 text-lg font-medium w-full mr-4">
@@ -42,7 +40,8 @@
               New Student ?
             </div>
             <div>
-             <a href="https://student.jkbeducation.com/login"> <button class="px-6 py-2 bg-[#fa8b26] w-full rounded-lg hover:bg-[#ca9462]">Sign Up</button></a>
+              <a href="https://student.jkbeducation.com/login"> <button
+                  class="px-6 py-2 bg-[#fa8b26] w-full rounded-lg hover:bg-[#ca9462]">Sign Up</button></a>
             </div>
           </div>
           <div class="flex-flex-row space-y-1 text-lg font-medium w-full ">
@@ -50,17 +49,17 @@
               Already Student ?
             </div>
             <div>
-             <a href="https://student.jkbeducation.com/login"> 
-              <button class="px-6 py-2 bg-[#fa8b26] rounded-lg w-full hover:bg-[#ca9462]">Log In</button></a>
+              <a href="https://student.jkbeducation.com/login">
+                <button class="px-6 py-2 bg-[#fa8b26] rounded-lg w-full hover:bg-[#ca9462]">Log In</button></a>
             </div>
           </div>
         </div>
+      </div>
+
     </div>
+  </div>
 
-</div>
-</div>
-
-{{!-- <div class="predict-clg-popup">
+  {{!-- <div class="predict-clg-popup">
 
     <div class="popup-top">
       <div id="predict-heading" class="popup-head">
@@ -209,7 +208,7 @@
 
   <!-- College List Div -->
 
-<div class="college-list-popup">
+  <div class="college-list-popup">
 
 
     <div class="popup-top">
@@ -281,7 +280,7 @@
       </div>
     </form>
 
-</div>
+  </div>
 
   <!-- list of colleges by district -->
   <div class="shortlist-clg-new">
@@ -306,7 +305,7 @@
   </div>
 
   <div id="second-wrapper">
-      <div class="flex flex-row w-full space-x-4  sm:space-x-6 justify-around sm:mr-4 mb-4">
+    <div class="flex flex-row w-full space-x-4  sm:space-x-6 justify-around sm:mr-4 mb-4">
       <div class="achievements   flex-1  sm:w-full ">
         <img src="/images/counselling.png" />
         <div data-count="45000">0</div>
@@ -322,7 +321,7 @@
         <div data-count="250">0</div>
         <p>Start-Up<br />Projects<br />Completed</p>
       </div>
-      </div>
+    </div>
     <section id="wrap-right">
       <ul>
         <li>
