@@ -1,11 +1,9 @@
 let predbtn = document.getElementById("predict-btn");
-
 predbtn.addEventListener("click", function () {
   let name = document.getElementById("name").value;
   let mail = document.getElementById("mail").value;
   let contact = String(document.getElementById("contact").value);
   let address = document.getElementById("address").value;
-  // console.log(name.value , mail.value , contact.value , address.value);
   // let univesity = document.getElementById('university').value;
   let university =
     document.getElementById("university").options[
@@ -21,8 +19,6 @@ predbtn.addEventListener("click", function () {
     document.getElementById("branch").options[
       document.getElementById("branch").selectedIndex
     ].text;
-  console.log(university);
-  console.log(caste, branch, score, exam);
 
   let predfor = {
     name: name,
@@ -36,8 +32,6 @@ predbtn.addEventListener("click", function () {
     caste: caste,
   };
 
-  console.log(predfor);
-
   let resultStr = "";
   fetch("https://api.jkbeducation.com/api/v1/predict-colleges-by-score", {
     method: "POST",
@@ -46,21 +40,13 @@ predbtn.addEventListener("click", function () {
   })
     .then((response) => response.json())
     .then(function (json) {
-      console.log(json);
       resultStr = JSON.stringify(json);
-      console.log(resultStr);
       const fetchedArr = json["result"];
-      // const fetchedScoreArr = json["result"];
-      console.log(fetchedArr);
-
-      // console.log(json["result"]["0"]);
-      // console.log(result['result'][0]);
       let len = json["result"].length;
 
       for (let i = 0; i < len; i++) {
         let ul = document.createElement("ul");
         ul.setAttribute("class", "shortlist-clg-list");
-
         let li = document.createElement("li");
         let text = document.createTextNode(`${i + 1}`);
         li.append(text);
@@ -107,13 +93,11 @@ predbtn.addEventListener("click", function () {
         li.setAttribute("class", "score");
         ul.append(li);
 
-        console.log(ul);
         document.getElementById("shortlist-clg-names").append(ul);
       }
 
       let feesbtn = document.querySelector("#fees-sort");
       feesbtn.addEventListener("click", () => {
-        console.log("Sorted by fees.");
         const sortedFeesArr = fetchedArr.sort(function (a, b) {
           if (a.fees < b.fees) {
             return -1;
@@ -182,14 +166,12 @@ predbtn.addEventListener("click", function () {
           li.setAttribute("class", "score");
           ul.append(li);
 
-          console.log(ul);
           document.getElementById("shortlist-clg-names").append(ul);
         }
       });
 
       let scorebtn = document.querySelector("#score-sort");
       scorebtn.addEventListener("click", () => {
-        console.log("Sorted by score.");
         let sortScoreArr = JSON.parse(resultStr)["result"];
         document.querySelector(
           "#shortlist-clg-names"
@@ -252,7 +234,76 @@ predbtn.addEventListener("click", function () {
           li.setAttribute("class", "score");
           ul.append(li);
 
-          console.log(ul);
+          document.getElementById("shortlist-clg-names").append(ul);
+        }
+      });
+      var yearSelect = document.getElementById("year-select");
+      yearSelect.addEventListener("change", function () {
+        var x = yearSelect.value;
+        const filteredData = JSON.parse(resultStr)["result"].filter(
+          (item) => item.year === parseInt(x)
+        );
+        document.querySelector(
+          "#shortlist-clg-names"
+        ).innerHTML = `<ul class="shortlist-clg-list" id="shortlist-clg-title">
+                          <li class="sr-no">Sr No.</li>
+                          <li class="college-code">Code</li>
+                          <li class="college-name">College Name</li>
+                          <li class="branch-name">Branch</li>
+                          <li class="fees-name">Fees</li>
+                          <li class="location">Location</li>
+                          <li class="score">Score</li>
+                        </ul>`;
+        for (let i = 0; i < len; i++) {
+          let ul = document.createElement("ul");
+          ul.setAttribute("class", "shortlist-clg-list");
+
+          let li = document.createElement("li");
+          let text = document.createTextNode(`${i + 1}`);
+          li.append(text);
+          li.setAttribute("class", "sr-no");
+          ul.append(li);
+
+          li = document.createElement("li");
+          text = document.createTextNode(filteredData[i]["college_code"]);
+          li.append(text);
+          li.setAttribute("class", "college-code");
+          ul.append(li);
+
+          text = document.createTextNode(filteredData[i]["college_name"]);
+          li = document.createElement("li");
+          li.append(text);
+          li.setAttribute("class", "college-name");
+          ul.append(li);
+
+          text = document.createTextNode(filteredData[i]["branch_name"]);
+          li = document.createElement("li");
+          li.append(text);
+          li.setAttribute("class", "branch-name");
+          ul.append(li);
+
+          text = document.createTextNode(filteredData[i]["fees"]);
+          li = document.createElement("li");
+          li.append(text);
+          li.setAttribute("class", "fees-name");
+          ul.append(li);
+
+          text = document.createTextNode(filteredData[i]["location"]);
+          li = document.createElement("li");
+          li.append(text);
+          li.setAttribute("class", "location");
+          ul.append(li);
+
+          if (predfor["exam_type"] == "JEE") {
+            text = document.createTextNode(filteredData[i]["ai"]);
+          } else {
+            text = document.createTextNode(filteredData[i][caste]);
+          }
+          li = document.createElement("li");
+          li.append(text);
+          li.setAttribute("class", "score");
+          ul.append(li);
+
           document.getElementById("shortlist-clg-names").append(ul);
         }
       });
@@ -270,9 +321,9 @@ predbtn.addEventListener("click", function () {
       //             tfws:63.5478045
       //             university_code:5
       //             university_name:"Kavayitri Bahinabai Chaudhari North Maharashtra University"
+      //             year:2023
       //             _id:"649326a269614942c318140c"
       //     }
       // }
     });
-  // console.log(result);
 });

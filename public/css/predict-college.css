@@ -499,6 +499,20 @@ nav {
   outline: none;
 }
 
+#year-select {
+  border: 0;
+  width: 100%;
+  border-radius: 0.8rem;
+  padding: 0.6rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-sec-light);
+  color: var(--font-clr);
+  text-overflow: ellipsis;
+  outline: none;
+}
+
 #exam-input select {
   width: 28%;
   margin-right: 0.4rem;
@@ -640,7 +654,7 @@ nav {
 .sortbtn {
   background-color: var(--accent-clr);
   font-size: 1rem;
-  padding: 0.4rem 0.6rem;
+  padding: 0.7rem 0.6rem;
   border-radius: 0.4rem;
   font-weight: bolder;
   cursor: pointer;
