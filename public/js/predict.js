@@ -32,18 +32,18 @@ predbtn.addEventListener("click", function () {
     caste: caste,
   };
 
-  let resultStr = "";
+  let resultArr;
   fetch("https://api.jkbeducation.com/api/v1/predict-colleges-by-score", {
     method: "POST",
     body: JSON.stringify(predfor),
     headers: { "Content-type": "application/json; charset=UTF-8" },
   })
     .then((response) => response.json())
-    .then(function (json) {
-      resultStr = JSON.stringify(json);
-      const fetchedArr = json["result"];
-      let len = json["result"].length;
-
+    .then(function (data) {
+      resultArr = data["result"];
+      let fetchedArr = resultArr;
+      let len = fetchedArr.length;
+      console.log(len);
       for (let i = 0; i < len; i++) {
         let ul = document.createElement("ul");
         ul.setAttribute("class", "shortlist-clg-list");
@@ -54,39 +54,39 @@ predbtn.addEventListener("click", function () {
         ul.append(li);
 
         li = document.createElement("li");
-        text = document.createTextNode(json["result"][i]["college_code"]);
+        text = document.createTextNode(fetchedArr[i]["college_code"]);
         li.append(text);
         li.setAttribute("class", "college-code");
         ul.append(li);
 
-        text = document.createTextNode(json["result"][i]["college_name"]);
+        text = document.createTextNode(fetchedArr[i]["college_name"]);
         li = document.createElement("li");
         li.append(text);
         li.setAttribute("class", "college-name");
         ul.append(li);
 
-        text = document.createTextNode(json["result"][i]["branch_name"]);
+        text = document.createTextNode(fetchedArr[i]["branch_name"]);
         li = document.createElement("li");
         li.append(text);
         li.setAttribute("class", "branch-name");
         ul.append(li);
 
-        text = document.createTextNode(json["result"][i]["fees"]);
+        text = document.createTextNode(fetchedArr[i]["fees"]);
         li = document.createElement("li");
         li.append(text);
         li.setAttribute("class", "fees-name");
         ul.append(li);
 
-        text = document.createTextNode(json["result"][i]["location"]);
+        text = document.createTextNode(fetchedArr[i]["location"]);
         li = document.createElement("li");
         li.append(text);
         li.setAttribute("class", "location");
         ul.append(li);
 
         if (predfor["exam_type"] == "JEE") {
-          text = document.createTextNode(json["result"][i]["ai"]);
+          text = document.createTextNode(fetchedArr[i]["ai"]);
         } else {
-          text = document.createTextNode(json["result"][i][caste]);
+          text = document.createTextNode(fetchedArr[i][caste]);
         }
         li = document.createElement("li");
         li.append(text);
@@ -172,7 +172,14 @@ predbtn.addEventListener("click", function () {
 
       let scorebtn = document.querySelector("#score-sort");
       scorebtn.addEventListener("click", () => {
-        let sortScoreArr = JSON.parse(resultStr)["result"];
+        const sortScoreArr = fetchedArr.sort(function (a, b) {
+          if (a[caste] < b[caste]) {
+            return -1;
+          }
+          if (a[caste] > b[caste]) {
+            return 1;
+          }
+        })
         document.querySelector(
           "#shortlist-clg-names"
         ).innerHTML = `<ul class="shortlist-clg-list" id="shortlist-clg-title">
@@ -240,9 +247,7 @@ predbtn.addEventListener("click", function () {
       var yearSelect = document.getElementById("year-select");
       yearSelect.addEventListener("change", function () {
         var x = yearSelect.value;
-        const filteredData = JSON.parse(resultStr)["result"].filter(
-          (item) => item.year === parseInt(x)
-        );
+        fetchedArr = resultArr.filter((item) => item.year === parseInt(x));
         document.querySelector(
           "#shortlist-clg-names"
         ).innerHTML = `<ul class="shortlist-clg-list" id="shortlist-clg-title">
@@ -265,39 +270,39 @@ predbtn.addEventListener("click", function () {
           ul.append(li);
 
           li = document.createElement("li");
-          text = document.createTextNode(filteredData[i]["college_code"]);
+          text = document.createTextNode(fetchedArr[i]["college_code"]);
           li.append(text);
           li.setAttribute("class", "college-code");
           ul.append(li);
 
-          text = document.createTextNode(filteredData[i]["college_name"]);
+          text = document.createTextNode(fetchedArr[i]["college_name"]);
           li = document.createElement("li");
           li.append(text);
           li.setAttribute("class", "college-name");
           ul.append(li);
 
-          text = document.createTextNode(filteredData[i]["branch_name"]);
+          text = document.createTextNode(fetchedArr[i]["branch_name"]);
           li = document.createElement("li");
           li.append(text);
           li.setAttribute("class", "branch-name");
           ul.append(li);
 
-          text = document.createTextNode(filteredData[i]["fees"]);
+          text = document.createTextNode(fetchedArr[i]["fees"]);
           li = document.createElement("li");
           li.append(text);
           li.setAttribute("class", "fees-name");
           ul.append(li);
 
-          text = document.createTextNode(filteredData[i]["location"]);
+          text = document.createTextNode(fetchedArr[i]["location"]);
           li = document.createElement("li");
           li.append(text);
           li.setAttribute("class", "location");
           ul.append(li);
 
           if (predfor["exam_type"] == "JEE") {
-            text = document.createTextNode(filteredData[i]["ai"]);
+            text = document.createTextNode(fetchedArr[i]["ai"]);
           } else {
-            text = document.createTextNode(filteredData[i][caste]);
+            text = document.createTextNode(fetchedArr[i][caste]);
           }
           li = document.createElement("li");
           li.append(text);
