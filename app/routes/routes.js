@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Contact = require("../models/contact");
+// const Contact = require("../models/contact");
 
 router.get("/", (req, res) => {
   res.render("home", {
@@ -9,17 +9,17 @@ router.get("/", (req, res) => {
   });
 });
 
-router.post("/contact", async (req, res) => {
-  const data = req.body;
-  const contact = await Contact.create({
-    name: data.name,
-    phone: data.phone,
-    email: data.email,
-    address: data.address,
-    purpose: data.purpose,
-  });
-  console.log(contact);
-});
+// router.post("/contact", async (req, res) => {
+//   const data = req.body;
+//   const contact = await Contact.create({
+//     name: data.name,
+//     phone: data.phone,
+//     email: data.email,
+//     address: data.address,
+//     purpose: data.purpose,
+//   });
+//   console.log(contact);
+// });
 
 router.get("/counselling-page", (req, res) => {
   res.render("counselling-page", {
