@@ -52,16 +52,16 @@ closebtn3.addEventListener("click", function () {
 //To show popup of college list by district
 const listCollegeBtn = document.getElementById("list-of-college-btn");
 listCollegeBtn.addEventListener("click", function () {
-  // scrollTop();
-  // document.querySelector(".overlay").classList.add("showoverlay");
-  // document
-  //   .querySelector(".college-list-popup")
-  //   .classList.add("show-college-list-popup");
   scrollTop();
   document.querySelector(".overlay").classList.add("showoverlay");
   document
-    .querySelector(".predict-clg-popup")
-    .classList.add("show-score-popup");
+    .querySelector(".college-list-popup")
+    .classList.add("show-college-list-popup");
+  // scrollTop();
+  // document.querySelector(".overlay").classList.add("showoverlay");
+  // document
+  //   .querySelector(".predict-clg-popup")
+  //   .classList.add("show-score-popup");
 });
 
 const closebtn2 = document.getElementById("cross2");

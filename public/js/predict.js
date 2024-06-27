@@ -85,7 +85,7 @@ predbtn.addEventListener("click", function () {
         li.setAttribute("class", "branch-name");
         ul.append(li);
 
-        text = document.createTextNode(json["result"][i]["fees"]);
+        text = document.createTextNode(json["result"][i]["fees"] || 'N/A');
         li = document.createElement("li");
         li.append(text);
         li.setAttribute("class", "fees-name");
@@ -161,7 +161,7 @@ predbtn.addEventListener("click", function () {
           li.setAttribute("class", "branch-name");
           ul.append(li);
 
-          text = document.createTextNode(sortedFeesArr[i]["fees"]);
+          text = document.createTextNode(sortedFeesArr[i]["fees"] || 'N/A');
           li = document.createElement("li");
           li.append(text);
           li.setAttribute("class", "fees-name");
@@ -230,7 +230,7 @@ predbtn.addEventListener("click", function () {
           li.setAttribute("class", "branch-name");
           ul.append(li);
 
-          text = document.createTextNode(sortScoreArr[i]["fees"]);
+          text = document.createTextNode(sortScoreArr[i]["fees"] || 'N/A');
           li = document.createElement("li");
           li.append(text);
           li.setAttribute("class", "fees-name");
